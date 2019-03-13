@@ -42,14 +42,14 @@ function hitPointsDown(increment){
 // this is the secret sauce, that makes the scene objects render
 function renderPage(sceneToRender) {
   for (var i = 0; i < book.length; i++) {
-    if (book[i].pageNumber === sceneToRender){
+    if (book[i].sceneNumber === sceneToRender){
       var pageText = document.createElement('section');
       pageText.textContent = book[i].text;
       bodyMain.appendChild(pageText);
       var pageHtml = document.createElement('div');
       pageHtml.innerHTML = book[i].html;
       bodyMain.appendChild(pageHtml);
-      hero.scenesVisited.push(book[i].pageNumber);
+      hero.scenesVisited.push(book[i].sceneNumber);
     }
   }
 }
