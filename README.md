@@ -1,2 +1,2 @@
-# nonsense2
-Trying to create a quick and dirty object -> page templating POC
+# Initial Readme
+Read me for the Story Adventure!
