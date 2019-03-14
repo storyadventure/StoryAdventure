@@ -4,11 +4,8 @@ var bodyMain = document.getElementById('bodymain');
 var book = [];
 var characterName = prompt('What will your heroes name be?');
 
-original-feature-work
-
 // this is the hero object, we will be adding items and 
 
-master
 var hero = {
   name: characterName,
   hitPoints: 20,
