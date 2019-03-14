@@ -11,6 +11,15 @@ body {
     margin: 0 auto;
 }
 
+#backgroundimage {
+    width: 960px;
+    height: 500px;
+    
+}
+footer {
+    outline: dashed 5px green;
+    width: 960px;
+}
 .health-bar {
     position: relative;
     width: 300px;
