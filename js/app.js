@@ -4,7 +4,7 @@ var bodyMain = document.getElementById('bodymain');
 var book = [];
 var characterName = prompt('What will your heroes name be?');
 
-// this is the hero object, we will be adding items and 
+// this is the hero object, we will be adding items and
 var hero = {
   name: characterName,
   hitPoints: 20,
@@ -55,4 +55,53 @@ function renderPage(sceneToRender) {
 }
 
 renderPage('tree1');
+
+
+
+/////////////////////////////// HUD CONSTRUCTOR ///////////////////////////////
+
+class HealthBar {
+  constructor (element, initialValue = 0) {
+    this.valueEl = element.querySelector('.health-bar-value');
+    this.fillEl = element.querySelector('.health-bar-fill');
+    this.setValue(initialValue);
+
+  // console.log('check valueEl: ', this.valueEl);
+  // console.log('check fillEl: ', this.fillEl);
+  }
+
+  setValue(newValue) {
+    if (newValue < 0) {//check and/or convert to 0 if value is less than 0.
+      newValue = 0;
+    }
+    if (newValue > 100) {//check and/or convert to 100 if value is greater than 100.
+      newvalue = 100;
+    }
+
+    this.value = newValue;
+    this.update();
+  }
+
+  update() {
+    const PERCENTAGE = this.value + '%';
+    this.fillEl.style.width = PERCENTAGE;
+    this.valueEl.textContent = PERCENTAGE;
+
+  }
+}
+
+const DMG_LVL_ARRAY = [5, 10, 15, 20];
+const HEAL_LVL_ARRAY = [5, 10, 15, 20];
+// HBP stands for Health Bar Percentage
+const HBP = new HealthBar(document.querySelector('.health-bar'), 100/*hero.hp*/);// turns the new instance into a constant.
+
+function updateHP() {
+  HBP.setValue(100 - DMG_LVL_ARRAY[2]/*hero.hp - DMG_LVL_ARRAY[2]*/);
+  console.log('check current hero hp: ', /*hero.hp*/HBP);
+}
+
+// updateHP() calls the update hit points function which will take the current hero.hp and minus whatever damage is recieved from the damage level array.
+
+// HBP.setValue(hero.hp); will create a new health bar instance and pass hero.hp i.e. objects current hitpoint value.
+
 
