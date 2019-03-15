@@ -72,18 +72,6 @@ renderPage('tree1');
 
 
 /////////////////////////////// HUD CONSTRUCTOR ///////////////////////////////
-/*
-  const HP_DMG_ARRAY = [5, 10, 15, 20];
-  const ARMOR_DMG_ARRAY = [15, 25, 35, 50]; // still thinking if I want to have 2 constants in 2 arrays or have 8 seperate constants.  Depends on how I scale the armor/health ratios and how and when they are depleted.  There may need to be some kind of check function that checks the hero object for and item, if so what item, and also what powers that item has.  those will affect whether a player can increase their hp or armor.  In those sections the math will be simple, but it will depend on whether we want to use different constants to easily identify the numbers, or if we cram them all into the 2 arrays and reference their index for math purposes.
-  */
-const HP_DMG_LVL_ONE = 5;
-const HP_DMG_LVL_TWO = 10;
-const HP_DMG_LVL_THREE = 15;
-const HP_DMG_LVL_FOUR = 20;
-const ARMOR_DMG_LVL_ONE = 15;
-const ARMOR_DMG_LVL_TWO = 25;
-const ARMOR_DMG_LVL_THREE = 35;
-const ARMOR_DMG_LVL_FOUR = 50;
 
 /* TEMP NOTE: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 Explanation of what a class function is */
@@ -155,28 +143,47 @@ const AB = new ArmorBar(document.querySelector('.armor-bar'), hero.armorHP);// t
 AB.setValue(hero.armorHP); // will create a new health bar instance and pass hero.hp i.e. objects current hitpoint value.
 
 
-function doDamage(damage){
+function doDamage(damage) {
+  //check for armor before applying damage to health
+  if (hero.armorHP > 0) {
+    return loseArmor(damage);
+  }
   HB.setValue(hero.hitPoints - damage);
   hero.hitPoints = hero.hitPoints - damage;
-  if(hero.hitPoints < 0){hero.hitPoints = 0;}
+  // if number is greather than 100 reset to 100
+  if (hero.hitPoints < 0) {
+    hero.hitPoints = 0;
+  }
 }
 
-
-
-function healDamage(damage){
+function healDamage(damage) {
   HB.setValue(hero.hitPoints + damage);
   hero.hitPoints = hero.hitPoints + damage;
-  if(hero.hitPoints > 100){hero.hitPoints = 100;}
+  // if number is greater than 100 reset to 100
+  if(hero.hitPoints > 100) {
+    hero.hitPoints = 100;
+  }
 }
 
-function loseArmor(value){
-  AB.setValue(hero.armorHP - value);
-  hero.armorHP = hero.armorHP - value;
-  if(hero.armorHP < 0){hero.armorHP = 0;}
+function loseArmor(damage) {
+  if (damage > hero.armorHP) {
+    // original equasion: damageRemainder was hero.hitPoints which took the remainder of 10.  That turned hp to 10 instead of 90.  After we use the damage remainder as a place holder for the remainder, we can use that in the equasion hero.hitPoints - damageRemainder
+    var damageRemainder = damage - hero.armorHP;
+    HB.setValue(hero.hitPoints - damageRemainder);
+    hero.hitPoints = hero.hitPoints - damageRemainder;
+  }
+  AB.setValue(hero.armorHP - damage);
+  hero.armorHP = hero.armorHP - damage;
+  // if number is less than 0 reset to 0
+  if(hero.armorHP < 0) {
+    hero.armorHP = 0;
+  }
 }
 
-function gainArmor(value){
-  AB.setValue(hero.armorHP + value);
-  hero.armorHP = hero.armorHP + value;
-  if(hero.armorHP > 100){hero.armorHP = 100;}
+function gainArmor(damage) {
+  AB.setValue(hero.armorHP + damage);
+  hero.armorHP = hero.armorHP + damage;
+  if(hero.armorHP > 100) {
+    hero.armorHP = 100;
+  }
 }
