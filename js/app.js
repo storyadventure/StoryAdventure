@@ -4,11 +4,12 @@ var bodyMain = document.getElementById('bodymain');
 var book = [];
 var characterName = prompt('What will your heroes name be?');
 
-// this is the hero object, we will be adding items and 
+// this is the hero object, we will be adding items and
 
 var hero = {
   name: characterName,
-  hitPoints: 20,
+  hitPoints: 100,
+  armorHP: 0,
   items: [],
   scenesVisited: [],
 };
@@ -70,15 +71,30 @@ renderPage('tree1');
 
 
 /////////////////////////////// HUD CONSTRUCTOR ///////////////////////////////
+/*
+  const HP_DMG_ARRAY = [5, 10, 15, 20];
+  const ARMOR_DMG_ARRAY = [15, 25, 35, 50]; // still thinking if I want to have 2 constants in 2 arrays or have 8 seperate constants.  Depends on how I scale the armor/health ratios and how and when they are depleted.  There may need to be some kind of check function that checks the hero object for and item, if so what item, and also what powers that item has.  those will affect whether a player can increase their hp or armor.  In those sections the math will be simple, but it will depend on whether we want to use different constants to easily identify the numbers, or if we cram them all into the 2 arrays and reference their index for math purposes.
+  */
+const HP_DMG_LVL_ONE = 5;
+const HP_DMG_LVL_TWO = 10;
+const HP_DMG_LVL_THREE = 15;
+const HP_DMG_LVL_FOUR = 20;
+const ARMOR_DMG_LVL_ONE = 15;
+const ARMOR_DMG_LVL_TWO = 25;
+const ARMOR_DMG_LVL_THREE = 35;
+const ARMOR_DMG_LVL_FOUR = 50;
+
+/* TEMP NOTE: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+Explanation of what a class function is */
 
 class HealthBar {
-  constructor (element, initialValue = 0) {
+  constructor (element, initialValue = 100) {
     this.valueEl = element.querySelector('.health-bar-value');
     this.fillEl = element.querySelector('.health-bar-fill');
     this.setValue(initialValue);
 
-  // console.log('check valueEl: ', this.valueEl);
-  // console.log('check fillEl: ', this.fillEl);
+    // console.log('check valueEl: ', this.valueEl);
+    // console.log('check fillEl: ', this.fillEl);
   }
 
   setValue(newValue) {
@@ -86,7 +102,7 @@ class HealthBar {
       newValue = 0;
     }
     if (newValue > 100) {//check and/or convert to 100 if value is greater than 100.
-      newvalue = 100;
+      newValue = 100;
     }
 
     this.value = newValue;
@@ -94,25 +110,46 @@ class HealthBar {
   }
 
   update() {
-    const PERCENTAGE = this.value + '%';
-    this.fillEl.style.width = PERCENTAGE;
-    this.valueEl.textContent = PERCENTAGE;
+    var percentage = this.value + '%';
+    this.fillEl.style.width = percentage;
+    this.valueEl.textContent = percentage;
 
   }
 }
+// HB stands for Health Bar
+const HB = new HealthBar(document.querySelector('.health-bar'), hero.hitPoints);// turns the new instance into a constant with an initial value of 100.
+HB.setValue(hero.hitPoints); // will create a new health bar instance and pass hero.hp i.e. objects current hitpoint value.
 
-const DMG_LVL_ARRAY = [5, 10, 15, 20];
-const HEAL_LVL_ARRAY = [5, 10, 15, 20];
-// HBP stands for Health Bar Percentage
-const HBP = new HealthBar(document.querySelector('.health-bar'), 100/*hero.hp*/);// turns the new instance into a constant.
 
-function updateHP() {
-  HBP.setValue(100 - DMG_LVL_ARRAY[2]/*hero.hp - DMG_LVL_ARRAY[2]*/);
-  console.log('check current hero hp: ', /*hero.hp*/HBP);
+class ArmorBar {
+  constructor (element, initialValue = 0) {
+    this.valueEl = element.querySelector('.armor-bar-value');
+    this.fillEl = element.querySelector('.armor-bar-fill');
+    this.setValue(initialValue);
+
+    // console.log('check valueEl: ', this.valueEl);
+    // console.log('check fillEl: ', this.fillEl);
+  }
+
+  setValue(newValue) {
+    if (newValue < 0) {//check and/or convert to 0 if value is less than 0.
+      newValue = 0;
+    }
+    if (newValue > 100) {//check and/or convert to 100 if value is greater than 100.
+      newValue = 100;
+    }
+
+    this.value = newValue;
+    this.update();
+  }
+
+  update() {
+    var percentage = this.value + '%';
+    this.fillEl.style.width = percentage;
+    this.valueEl.textContent = percentage;
+
+  }
 }
-
-// updateHP() calls the update hit points function which will take the current hero.hp and minus whatever damage is recieved from the damage level array.
-
-// HBP.setValue(hero.hp); will create a new health bar instance and pass hero.hp i.e. objects current hitpoint value.
-
+const AB = new ArmorBar(document.querySelector('.armor-bar'), hero.armorHP);// turns the new instance into a constant with an initial value of 0.
+AB.setValue(hero.armorHP); // will create a new health bar instance and pass hero.hp i.e. objects current hitpoint value.
 
