@@ -1,9 +1,9 @@
 #googlepic {
-    width: 100px;
-}
-
-* {
-    outline: dashed red 2px;
+    width: 200px;
+    position: absolute;
+    margin-left: 370px;
+    z-index: 2;
+    margin-top:180px;
 }
 
 body {
@@ -13,12 +13,30 @@ body {
 
 #backgroundimage {
     width: 960px;
-    height: 500px;
+    height: 570px;
+    border-radius: 8px;
+    margin-top: 30px;
     
 }
+#divId {
+    position: absolute;
+    background-color: blue;
+    margin-top:70px;
+}
+#activeText {
+    position: absolute;
+    color:white;
+    font-size: 20px;
+    z-index: 1;
+    margin-top: 50px;
+    margin-left: 275px;
+
+
+}
 footer {
-    outline: dashed 5px green;
     width: 960px;
+    margin-top: 30px;
+    height: 125px;
 }
 .health-bar {
     position: relative;

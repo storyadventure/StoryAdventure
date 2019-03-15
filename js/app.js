@@ -54,6 +54,7 @@ function renderPage(sceneToRender) {
       pageText.textContent = book[i].text;
       bodyMain.appendChild(pageText);
       var pageHtml = document.createElement('div');
+      pageHtml.id = 'divId';
       pageHtml.innerHTML = book[i].html;
       bodyMain.appendChild(pageHtml);
       hero.scenesVisited.push(book[i].sceneNumber);
