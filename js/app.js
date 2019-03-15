@@ -25,7 +25,20 @@ function SceneConstructor(sceneNumber, text, html, background) {
 }
 new SceneConstructor('tree2', 'Fast death!', '<img id= \'googlepic\' src=\'https://timedotcom.files.wordpress.com/2019/03/30-years.gif\' onclick="hitPointsDown(5)">Click to quickly kill the hero</img>', 'img/bg1.jpg');
 
-new SceneConstructor('tree1', 'On this page you will have to make some very serious choices', '<img id= \'googlepic\' src=\'https://timedotcom.files.wordpress.com/2019/03/30-years.gif\' onclick="hitPointsDown(2);"><p id = "textconstructor">Click to slowly kill the hero</p> <button id = "button1" onclick="renderPage(\'tree2\')">Click to go to tree2</button>','img/sunset.jpg');
+new SceneConstructor('tree1', 'On this page you will have to make some very serious choices', '<img id= \'googlepic\' src=\'https://timedotcom.files.wordpress.com/2019/03/30-years.gif\' onclick="hitPointsDown(2);">Click to slowly kill the hero</img> <button onclick="renderPage(\'graveyard\')">Click to go to tree2</button>','img/bg1.jpg');
+
+new SceneConstructor('Start1', 'Choose Your Own Adventure', '<img onclick=\"renderPage(\'Aaron1\')\" src=\'img\/warrior.jpg\' class=\'paths\'><\/img><img onclick=\"renderPage(\'Lee1\')\" src=\'img\/archer.jpg\' class=\'paths\'><\/img><img onclick=\"renderPage(\'Ludwin1\')\" src=\'img\/mage.jpg\' class=\'paths\'><\/img>\r\n<img onclick=\"renderPage(\'Ryan1\')\" src=\'img\/rogue.jpg\' class=\'paths\'><\/img>', 'img/startingscreen.jpg');
+
+new SceneConstructor('graveyard', 'You\'re dead.. Sorry! Not sorry!', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/graveyard.jpg');
+
+new SceneConstructor('Aaron1', 'Ryan\'s SAMPLE page', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
+new SceneConstructor('Lee1', 'Ryan\'s SAMPLE page', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
+new SceneConstructor('Ludwin1', 'Ryan\'s SAMPLE page', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
+new SceneConstructor('Ryan1', 'Ryan\'s SAMPLE page', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
+
+
+
+
 // Uncomment the next line to see every scene in the book that is available to reference
 // console.log(book);
 
