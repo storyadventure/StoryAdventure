@@ -122,7 +122,7 @@ HB.setValue(hero.hitPoints); // will create a new health bar instance and pass h
 
 
 class ArmorBar {
-  constructor (element, initialValue = 0) {
+  constructor (element, initialValue = hero.armorHP) {
     this.valueEl = element.querySelector('.armor-bar-value');
     this.fillEl = element.querySelector('.armor-bar-fill');
     this.setValue(initialValue);
@@ -168,3 +168,14 @@ function healDamage(damage){
   if(hero.hitPoints > 100){hero.hitPoints = 100;}
 }
 
+function loseArmor(value){
+  AB.setValue(hero.armorHP - value);
+  hero.armorHP = hero.armorHP - value;
+  if(hero.armorHP < 0){hero.armorHP = 0;}
+}
+
+function gainArmor(value){
+  AB.setValue(hero.armorHP + value);
+  hero.armorHP = hero.armorHP + value;
+  if(hero.armorHP > 100){hero.armorHP = 100;}
+}
