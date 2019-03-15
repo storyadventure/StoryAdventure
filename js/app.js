@@ -142,32 +142,24 @@ class ArmorBar {
 const AB = new ArmorBar(document.querySelector('.armor-bar'), hero.armorHP);// turns the new instance into a constant with an initial value of 0.
 AB.setValue(hero.armorHP); // will create a new health bar instance and pass hero.hp i.e. objects current hitpoint value.
 
+/////////////////////////// DAMAGE CONTROL FUNCTIONS ///////////////////////////
 
 function doDamage(damage) {
-  //check for armor before applying damage to health
+  // does armor exist? if so apply damage to armor before health
   if (hero.armorHP > 0) {
     return loseArmor(damage);
   }
   HB.setValue(hero.hitPoints - damage);
   hero.hitPoints = hero.hitPoints - damage;
-  // if number is greather than 100 reset to 100
+  // if number is greather than 0 reset to 0
   if (hero.hitPoints < 0) {
     hero.hitPoints = 0;
   }
 }
 
-function healDamage(damage) {
-  HB.setValue(hero.hitPoints + damage);
-  hero.hitPoints = hero.hitPoints + damage;
-  // if number is greater than 100 reset to 100
-  if(hero.hitPoints > 100) {
-    hero.hitPoints = 100;
-  }
-}
-
 function loseArmor(damage) {
+  // remaining damage will apply to health once armor is subtracted
   if (damage > hero.armorHP) {
-    // original equation: damageRemainder was hero.hitPoints which took the remainder of 10.  That turned hp to 10 instead of 90.  After we use the damage remainder as a place holder for the remainder, we can use that in the equation hero.hitPoints - damageRemainder
     var damageRemainder = damage - hero.armorHP;
     HB.setValue(hero.hitPoints - damageRemainder);
     hero.hitPoints = hero.hitPoints - damageRemainder;
@@ -175,15 +167,25 @@ function loseArmor(damage) {
   AB.setValue(hero.armorHP - damage);
   hero.armorHP = hero.armorHP - damage;
   // if number is less than 0 reset to 0
-  if(hero.armorHP < 0) {
+  if (hero.armorHP < 0) {
     hero.armorHP = 0;
+  }
+}
+
+function healDamage(damage) {
+  HB.setValue(hero.hitPoints + damage);
+  hero.hitPoints = hero.hitPoints + damage;
+  // if number is greater than 100 reset to 100
+  if (hero.hitPoints > 100) {
+    hero.hitPoints = 100;
   }
 }
 
 function gainArmor(damage) {
   AB.setValue(hero.armorHP + damage);
   hero.armorHP = hero.armorHP + damage;
-  if(hero.armorHP > 100) {
+  // if number is greater than 100 reset to 100
+  if (hero.armorHP > 100) {
     hero.armorHP = 100;
   }
 }
