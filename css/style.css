@@ -1,9 +1,9 @@
-#googlepic {
+#divId img {
     width: 200px;
     position: absolute;
     margin-left: 370px;
     z-index: 2;
-    margin-top:180px;
+    margin-top:-180px;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 
 #backgroundimage {
     width: 960px;
-    height: 570px;
+    height: 525px;
     border-radius: 8px;
     margin-top: 30px;
     
@@ -22,7 +22,12 @@ body {
 #divId {
     position: absolute;
     background-color: blue;
-    margin-top:70px;
+    margin-top:500px;
+}
+#divId #textconstructor{
+    color: white;
+    margin-left: 380px;
+    margin-top: -200px;
 }
 #activeText {
     position: absolute;
@@ -30,13 +35,17 @@ body {
     font-size: 20px;
     z-index: 1;
     margin-top: 50px;
-    margin-left: 275px;
-
-
+    margin-left: 255px;
 }
-
+#divId #button1 {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 200px;
+}
 footer {
-    background-color: #000;
+    margin-top: 30px;
+    background-color: red;
+    border-radius: 8px;
     opacity: 0.6; /*Looks cool even without anything underneath.
     Most likely opacity will get removed along with the z index's in future versions*/
 }
@@ -113,3 +122,4 @@ h6 {
     width:100px;
     height:100px;
 }
+
