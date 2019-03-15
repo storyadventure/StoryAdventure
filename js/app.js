@@ -167,7 +167,7 @@ function healDamage(damage) {
 
 function loseArmor(damage) {
   if (damage > hero.armorHP) {
-    // original equasion: damageRemainder was hero.hitPoints which took the remainder of 10.  That turned hp to 10 instead of 90.  After we use the damage remainder as a place holder for the remainder, we can use that in the equasion hero.hitPoints - damageRemainder
+    // original equation: damageRemainder was hero.hitPoints which took the remainder of 10.  That turned hp to 10 instead of 90.  After we use the damage remainder as a place holder for the remainder, we can use that in the equation hero.hitPoints - damageRemainder
     var damageRemainder = damage - hero.armorHP;
     HB.setValue(hero.hitPoints - damageRemainder);
     hero.hitPoints = hero.hitPoints - damageRemainder;
