@@ -22,16 +22,17 @@ body {
 #divId {
     position: absolute;
     background-color: blue;
-    margin-top:70px;
+    margin-top: 250px;
 }
 #activeText {
     position: absolute;
-    color:white;
+    color: white;
     font-size: 20px;
     z-index: 1;
+    width: 584px;
     margin-top: 50px;
-    margin-left: 275px;
-
+    margin-left: 46px;
+}
 
 }
 

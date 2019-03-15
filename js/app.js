@@ -23,9 +23,15 @@ function SceneConstructor(sceneNumber, text, html, background) {
   this.background = background;
   book.push(this);
 }
-new SceneConstructor('tree2', 'Fast death!', '<img id= \'googlepic\' src=\'https://timedotcom.files.wordpress.com/2019/03/30-years.gif\' onclick="hitPointsDown(5)">Click to quickly kill the hero</img>', 'img/bg1.jpg');
+new SceneConstructor('lee1', 'You walk deep into the jungle. The surroundings are dark and teeming with life. As you look around you see the glint of some large animals eyes.  A large jungle cat slinks into view. You see the glint of gold from a necklace the big cat is wearing. It locks eyes with you and begins to slowly walk away. What do you do?', '<button onclick=\"renderPage(\'lee2\')\">Follow the leopard deeper into the jungle\r\n<\/button>\r\n<button onclick=\"renderPage(\'lee3b\'), doDamage(35)\">\r\n Attack the leopard and try to take the necklace from its cold lifeless body\r\n<\/button>\r\n<button onclick=\"renderPage(\'lee4\')\">\r\n  Search the area for clues\r\n<\/button>', 'img/bg1.jpg');
 
-new SceneConstructor('tree1', 'On this page you will have to make some very serious choices', '<img id= \'googlepic\' src=\'https://timedotcom.files.wordpress.com/2019/03/30-years.gif\' onclick="hitPointsDown(2);">Click to slowly kill the hero</img> <button onclick="renderPage(\'tree2\')">Click to go to tree2</button>','img/bg1.jpg');
+new SceneConstructor('lee2', 'The big cat continues to walk ahead of you. Occassionally it glances back at you as if to make sure that you are following it. The forest eventually opens into a wide clearing, the sun is breaking through the dark clouds which have followed you from your homelands to this blighted land. You get closer and closer to the big cat until you can hear its soft breathing. It\'s continuing to hold eye contact with you until suddenly the jungle predator tenses and seems about to attack! What do you do?!','<button onclick=\"renderPage(\'lee3a\'), doDamage(35)\">Quickly attack before the animal has a chance to prepare\r\n<\/button>\r\n\r\n<button onclick=\"renderPage(\'lee5\'), giveItem(\'catlove\')\">Wait a moment to see what this dangerous adversary does\r\n<\/button>', 'img/bg1.jpg');
+
+new SceneConstructor('lee3a','The big cat growls and lunges at you before you can bring any weapon to bear. This apex predator could make short work of you but it isn\'t interested in a fight. It swipes you across the chest drawing blood and a grimace from you. You fall to the ground, quickly you spring back to your feet to prepare for another attack but you only see the briefest shadow of the big cat disappearing back into the forest.','<button onclick=\"renderPage(\'lee5\')\"> Collect yourself mentally and continue on your journey into the clearning.\r\n<\/button>\r\n','img/bg1.jpg');
+
+new SceneConstructor('lee3b','The big cat growls and lunges at you before you can bring any weapon to bear. This apex predator could make short work of you but it isn\'t interested in a fight. It swipes you across the chest drawing blood and a grimace from you. You fall to the ground, quickly you spring back to your feet to prepare for another attack but you only see the briefest shadow of the big cat disappearing back into the forest.','<button onclick=\"renderPage(\'lee6\')\"> Collect yourself mentally and continue on your journey into the clearning.\r\n<\/button>\r\n','img/bg1.jpg');
+
+
 // Uncomment the next line to see every scene in the book that is available to reference
 // console.log(book);
 
@@ -67,7 +73,6 @@ function renderPage(sceneToRender) {
   }
 }
 
-renderPage('tree1');
 
 
 
@@ -179,4 +184,8 @@ function gainArmor(value){
   AB.setValue(hero.armorHP + value);
   hero.armorHP = hero.armorHP + value;
   if(hero.armorHP > 100){hero.armorHP = 100;}
+}
+
+function giveItem(itemName){
+  hero.items.push(itemName);
 }
