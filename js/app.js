@@ -88,7 +88,7 @@ const ARMOR_DMG_LVL_FOUR = 50;
 Explanation of what a class function is */
 
 class HealthBar {
-  constructor (element, initialValue = 100) {
+  constructor (element, initialValue = hero.hitPoints) {
     this.valueEl = element.querySelector('.health-bar-value');
     this.fillEl = element.querySelector('.health-bar-fill');
     this.setValue(initialValue);
@@ -152,4 +152,19 @@ class ArmorBar {
 }
 const AB = new ArmorBar(document.querySelector('.armor-bar'), hero.armorHP);// turns the new instance into a constant with an initial value of 0.
 AB.setValue(hero.armorHP); // will create a new health bar instance and pass hero.hp i.e. objects current hitpoint value.
+
+
+function doDamage(damage){
+  HB.setValue(hero.hitPoints - damage);
+  hero.hitPoints = hero.hitPoints - damage;
+  if(hero.hitPoints < 0){hero.hitPoints = 0;}
+}
+
+
+
+function healDamage(damage){
+  HB.setValue(hero.hitPoints + damage);
+  hero.hitPoints = hero.hitPoints + damage;
+  if(hero.hitPoints > 100){hero.hitPoints = 100;}
+}
 
