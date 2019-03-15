@@ -172,6 +172,12 @@ function loseArmor(damage) {
   }
 }
 
+// for storyline purpose: if you need to zero-out the armor but not risk subtracting the HP call this function:
+function zeroArmor() {
+  AB.setValue(0);
+  hero.armorHP = 0;
+}
+
 function healDamage(damage) {
   HB.setValue(hero.hitPoints + damage);
   hero.hitPoints = hero.hitPoints + damage;
