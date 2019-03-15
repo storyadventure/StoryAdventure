@@ -25,7 +25,7 @@ function SceneConstructor(sceneNumber, text, html, background) {
 }
 new SceneConstructor('tree2', 'Fast death!', '<img id= \'googlepic\' src=\'https://timedotcom.files.wordpress.com/2019/03/30-years.gif\' onclick="hitPointsDown(5)">Click to quickly kill the hero</img>', 'img/bg1.jpg');
 
-new SceneConstructor('tree1', 'On this page you will have to make some very serious choices', '<img id= \'googlepic\' src=\'https://timedotcom.files.wordpress.com/2019/03/30-years.gif\' onclick="hitPointsDown(2);">Click to slowly kill the hero</img> <button onclick="renderPage(\'tree2\')">Click to go to tree2</button>','img/bg1.jpg');
+new SceneConstructor('tree1', 'On this page you will have to make some very serious choices', '<img id= \'googlepic\' src=\'https://timedotcom.files.wordpress.com/2019/03/30-years.gif\' onclick="hitPointsDown(2);"><p id = "textconstructor">Click to slowly kill the hero</p> <button id = "button1" onclick="renderPage(\'tree2\')">Click to go to tree2</button>','img/sunset.jpg');
 // Uncomment the next line to see every scene in the book that is available to reference
 // console.log(book);
 
