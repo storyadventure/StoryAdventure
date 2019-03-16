@@ -32,22 +32,30 @@ new SceneConstructor('lee3a','The big cat growls and lunges at you before you ca
 
 new SceneConstructor('lee3b','The big cat growls and lunges at you before you can bring any weapon to bear. This apex predator could make short work of you but it isn\'t interested in a fight. It swipes you across the chest drawing blood and a grimace from you. You fall to the ground, quickly you spring back to your feet to prepare for another attack but you only see the briefest shadow of the big cat disappearing back into the forest.','<button onclick=\"renderPage(\'lee6\')\"> Collect yourself mentally and continue on your journey into the clearning.\r\n<\/button>\r\n','img/bg1.jpg');
 
-new SceneConstructor('tree2', 'Fast death!', '<img id= \'googlepic\' src=\'https://timedotcom.files.wordpress.com/2019/03/30-years.gif\' onclick="hitPointsDown(5)">Click to quickly kill the hero</img>', 'img/sunset.jpg');
+// new SceneConstructor('tree2', 'Fast death!', '<img id= \'googlepic\' src=\'https://timedotcom.files.wordpress.com/2019/03/30-years.gif\' onclick="hitPointsDown(5)">Click to quickly kill the hero</img>', 'img/sunset.jpg');
 
-new SceneConstructor('tree1', 'On this page you will have to make some very serious choices', '<img id= \'googlepic\' src=\'https://timedotcom.files.wordpress.com/2019/03/30-years.gif\' onclick="hitPointsDown(2);"><p id = "textree1">Click to slowly kill the hero</p> <button id = "buttontree1" onclick="renderPage(\'graveyard\')">Click to go to tree2</button>','img/sunset.jpg');
+// new SceneConstructor('tree1', 'On this page you will have to make some very serious choices', '<img id= \'googlepic\' src=\'https://timedotcom.files.wordpress.com/2019/03/30-years.gif\' onclick="hitPointsDown(2);"><p id = "textree1">Click to slowly kill the hero</p> <button id = "buttontree1" onclick="renderPage(\'graveyard\')">Click to go to tree2</button>','img/sunset.jpg');
 
-new SceneConstructor('start1', 'Choose Your Own Adventure', '<img onclick=\"renderPage(\'aaron1\')\" src=\'img\/warrior.jpg\' class=\'paths\'><img onclick=\"renderPage(\'lee1\')\" src=\'img\/archer.jpg\' class=\'paths\'><\/img><img onclick=\"renderPage(\'ludwin1\')\" src=\'img\/mage.jpg\' class=\'paths\'><\/img>\r\n<img onclick=\"renderPage(\'ryan1\')\" src=\'img\/rogue.jpg\' class=\'paths\'><\/img>', 'img/startingscreen.jpg');
+new SceneConstructor('start1', 'Choose Your Own Adventure', '<ul><li><img onclick=\"renderPage(\'aaron1\')\" src=\'img\/warrior.jpg\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'lee1\')\" src=\'img\/archer.jpg\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'ludwinmain\')\" src=\'img\/mage.jpg\' class=\'paths\'><\/img>\r\n</li> <li><img onclick=\"renderPage(\'ryan1\')\" src=\'img\/rogue.jpg\' class=\'paths\'><\/img></li></ul>', 'img/startingscreen.jpg');
 
-new SceneConstructor('graveyard', 'You\'re dead.. Sorry! Not sorry!', '<button id = "buttongraveyard" onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/graveyard.jpg');
+new SceneConstructor('graveyard', 'You\'re dead.. Sorry! Not sorry!', '<button id = "buttongraveyard" onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/graveyard.jpg');
 
-new SceneConstructor('aaron1', 'Aaron\'s SAMPLE page', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
+new SceneConstructor('aaron1', 'Aaron\'s SAMPLE page', '<button onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
 
-new SceneConstructor('ludwin1', 'Ludwin\'s SAMPLE page', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
-new SceneConstructor('ryan1', 'Ryan\'s SAMPLE page', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
+new SceneConstructor('ludwin1', 'Ludwin\'s SAMPLE page', '<button onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
+new SceneConstructor('ryan1', 'Ryan\'s SAMPLE page', '<button onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
 renderPage('start1');
 
+//ludwin's scene constructor
+new SceneConstructor ('ludwinmain','It is a nice day in the little town of Oldtown, our Hero is wandering around town trying to find clues of how to get to the forest. It seems that nobody has any idea how to get to the forest, there are a few trails that you can take, choose carefully! nobody knows what kind of dangers this trails hide. there is a reason why the townspeople do not live the safety of their town.','<ul> <li><button onclick = "renderPage(\'ludwinscene1\')">Trail1</button></li> <li><button onclick = "renderPage(\'ludwinscene2\')"> ludwinscene2 </button></li> <li><button onclick = "renderPage(\'ludwinscene3\')"> ludwinscene3 </button></li> <li><button onclick = "renderPage(\'ludwinscene4\')"> ludwinscene4 </button><li> </ul>','img/sunset.jpg');
 
+new SceneConstructor ('ludwinscene1','Get ready for some hiking. The trail is covered in snow and you have no equipment, but some hiker a long time ago left some help. Choose carefully.','<ul> <li><button>clicks1</button></li> <li><button> clicks2 </button></li> <li><button> clicks3 </button></li> <li><button> clicks4 </button></li> </ul>','img/sunset.jpg' );
 
+new SceneConstructor ('ludwinscene2','Hello world','<ul> <li><button>clicksa1</button></li> <li><button> clicksa2 </button></li> <li><button> clicksa3 </button></li> <li><button> clicksa4 </button></li> </ul>','img/sunset.jpg' );
+
+new SceneConstructor ('ludwinscene3','Hello world','<ul> <li><button>clicksb1</button></li> <li><button> clicksb2 </button></li> <li><button> clicksb3 </button></li> <li><button> clicksb4 </button></li> </ul>','img/sunset.jpg' );
+
+new SceneConstructor ('ludwinscene4','Hello world','<ul> <li><button>clicksb1</button></li> <li><button> clicksb2 </button></li> <li><button> clicksb3 </button></li> <li><button> clicksb4 </button></li> </ul>','img/sunset.jpg' );
 
 
 // Uncomment the next line to see every scene in the book that is available to reference
