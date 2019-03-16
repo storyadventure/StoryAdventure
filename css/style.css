@@ -160,3 +160,7 @@ h6 {
     height:100px;
 }
 
+#resetbutton{
+    margin-left: 600px;
+    position: absolute;
+}
