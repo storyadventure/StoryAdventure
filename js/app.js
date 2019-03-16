@@ -36,7 +36,7 @@ new SceneConstructor('tree2', 'Fast death!', '<img id= \'googlepic\' src=\'https
 
 new SceneConstructor('tree1', 'On this page you will have to make some very serious choices', '<img id= \'googlepic\' src=\'https://timedotcom.files.wordpress.com/2019/03/30-years.gif\' onclick="hitPointsDown(2);"><p id = "textree1">Click to slowly kill the hero</p> <button id = "buttontree1" onclick="renderPage(\'graveyard\')">Click to go to tree2</button>','img/sunset.jpg');
 
-new SceneConstructor('start1', 'Choose Your Own Adventure', '<img onclick=\"renderPage(\'aaron1\')\" src=\'img\/warrior.jpg\' class=\'paths\'><img onclick=\"renderPage(\'Lee1\')\" src=\'img\/archer.jpg\' class=\'paths\'><\/img><img onclick=\"renderPage(\'Ludwin1\')\" src=\'img\/mage.jpg\' class=\'paths\'><\/img>\r\n<img onclick=\"renderPage(\'Ryan1\')\" src=\'img\/rogue.jpg\' class=\'paths\'><\/img>', 'img/startingscreen.jpg');
+new SceneConstructor('start1', 'Choose Your Own Adventure', '<img onclick=\"renderPage(\'aaron1\')\" src=\'img\/warrior.jpg\' class=\'paths\'><img onclick=\"renderPage(\'lee1\')\" src=\'img\/archer.jpg\' class=\'paths\'><\/img><img onclick=\"renderPage(\'ludwin1\')\" src=\'img\/mage.jpg\' class=\'paths\'><\/img>\r\n<img onclick=\"renderPage(\'ryan1\')\" src=\'img\/rogue.jpg\' class=\'paths\'><\/img>', 'img/startingscreen.jpg');
 
 new SceneConstructor('graveyard', 'You\'re dead.. Sorry! Not sorry!', '<button id = "buttongraveyard" onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/graveyard.jpg');
 
@@ -44,7 +44,7 @@ new SceneConstructor('aaron1', 'Aaron\'s SAMPLE page', '<button onclick=\"render
 
 new SceneConstructor('ludwin1', 'Ludwin\'s SAMPLE page', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
 new SceneConstructor('ryan1', 'Ryan\'s SAMPLE page', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
-
+renderPage('start1');
 
 
 
@@ -218,7 +218,7 @@ function gainArmor(damage) {
   if (hero.armorHP > 100) {
     hero.armorHP = 100;
   }
-
+}
 
 function giveItem(itemName){
   hero.items.push(itemName);
