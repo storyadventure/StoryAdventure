@@ -3,8 +3,8 @@
     position: absolute;
     margin-left: 370px;
     z-index: 2;
-    margin-top:180px;
-}
+    margin-top:-180px;
+} 
 
 body {
     width: 960px;
@@ -13,7 +13,7 @@ body {
 
 #backgroundimage {
     width: 960px;
-    height: 570px;
+    height: 525px;
     border-radius: 8px;
     margin-top: 30px;
     
@@ -21,22 +21,54 @@ body {
 
 #divId {
     position: absolute;
-    background-color: blue;
-    margin-top:70px;
+
+    
+    margin-top:500px;
+}
+#divId #textconstructor{
+    color: white;
+    margin-left: 380px;
+    margin-top: -200px;
+}
+#buttontree1{
+    margin-left:800px;
+    margin-top: 190px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+#buttongraveyard{
+    margin-left: 840px;
+    background-color: black;
+    color: white;
+}
+#textree1 {
+    color:white;
+    margin-left: 375px;
+    margin-top: -200px;
+
+
 }
 #activeText {
     position: absolute;
-    color:white;
+    color: white;
     font-size: 20px;
     z-index: 1;
+    width: 584px;
     margin-top: 50px;
-    margin-left: 275px;
 
+    margin-left: 255px;
+}
+#divId #button1 {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 200px;
 
 }
-
 footer {
-    background-color: #000;
+    margin-top: 30px;
+    background-color: red;
+    border-radius: 8px;
     opacity: 0.6; /*Looks cool even without anything underneath.
     Most likely opacity will get removed along with the z index's in future versions*/
 }
@@ -108,3 +140,9 @@ h6 {
 
     font-weight: bold;
 }
+
+.paths  {
+    width:100px;
+    height:100px;
+}
+
