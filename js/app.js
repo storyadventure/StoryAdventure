@@ -42,21 +42,33 @@ new SceneConstructor('leeDead', 'You have died.\r\n\r\nYou body is eaten by prog
 
 new SceneConstructor('lee8', 'You have answered the fairys riddle correctly!\r\n\r\n\"Aw this one got it right\" one fairy bemoaned to the others. \"I guess we have to let it go\". \"What a shame Belethazud was so hungry, I guess Bele might still find this little adventurer snack later\".\r\n\r\nYou are shaken but alive, you continue your journey heading towards the sound of fast rushing water.', '<ul><li><button onclick=\"renderPage(\'lee9\')\">Follow the sound of water<\/button><\/li><\/ul>', 'img/forestbg.jpg');
 
+
+
 new SceneConstructor('lee9', 'A coursing waterfall! As you leave the last identifiable part of the woods you see a large river spilling over the edge of a sheer cliff face. The sound is almost deafening and you are totally absorbed in the experience of seeing this mighty body of water rushing past you, over the edge of this ridgeline and then crashing into the mist below. \r\n\r\nYou have no idea how you will get down, but there is no other way since this ridge extends as far as you can see in either direction. If you had a boat you can at least try to ride down the waterfall but without a boat you will be jumping and hoping for the best.', '<ul>\r\n<li><button onclick=\"renderPage(\'lee10\'), doDamage(100)\">Jump for it!<\/button><\/li>\r\n<li><button onclick=\"renderPage(\'lee10\'), doDamage(50)\">Ride your boat down<\/button><\/li>\r\n<\/ul>', 'img/waterfallbg.jpg');
 
 
-new SceneConstructor('start1', 'Choose Your Own Adventure', '<img onclick=\"renderPage(\'aaron1\')\" src=\'img\/warrior.jpg\' class=\'paths\'><img onclick=\"renderPage(\'lee1\')\" src=\'img\/archer.jpg\' class=\'paths\'><\/img><img onclick=\"renderPage(\'ludwin1\')\" src=\'img\/mage.jpg\' class=\'paths\'><\/img>\r\n<img onclick=\"renderPage(\'ryan1\')\" src=\'img\/rogue.jpg\' class=\'paths\'><\/img>', 'img/startingscreen.jpg');
+new SceneConstructor('start1', 'Choose Your Own Adventure', '<ul><li><img onclick=\"renderPage(\'aaron1\')\" src=\'img\/warrior.jpg\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'lee1\')\" src=\'img\/archer.jpg\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'ludwinmain\')\" src=\'img\/mage.jpg\' class=\'paths\'><\/img>\r\n</li> <li><img onclick=\"renderPage(\'ryan1\')\" src=\'img\/rogue.jpg\' class=\'paths\'><\/img></li></ul>', 'img/startingscreen.jpg');
 
-new SceneConstructor('graveyard', 'You\'re dead.. Sorry! Not sorry!', '<button id = "buttongraveyard" onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/graveyard.jpg');
+new SceneConstructor('graveyard', 'You\'re dead.. Sorry! Not sorry!', '<button id = "buttongraveyard" onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/graveyard.jpg');
 
-new SceneConstructor('aaron1', 'Aaron\'s SAMPLE page', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
-
-new SceneConstructor('ludwin1', 'Ludwin\'s SAMPLE page', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
-new SceneConstructor('ryan1', 'Ryan\'s SAMPLE page', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
+new SceneConstructor('aaron1', 'Aaron\'s SAMPLE page', '<button onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
 
 
+new SceneConstructor('ludwin1', 'Ludwin\'s SAMPLE page', '<button onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
+new SceneConstructor('ryan1', 'Ryan\'s SAMPLE page', '<button onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
+renderPage('start1');
 
 
+//ludwin's scene constructor
+new SceneConstructor ('ludwinmain','It is a nice day in the little town of Oldtown, our Hero is wandering around town trying to find clues of how to get to the forest. It seems that nobody has any idea how to get to the forest, there are a few trails that you can take, choose carefully! nobody knows what kind of dangers this trails hide. there is a reason why the townspeople do not live the safety of their town.','<ul> <li><button onclick = "renderPage(\'ludwinscene1\')">Trail1</button></li> <li><button onclick = "renderPage(\'ludwinscene2\')"> ludwinscene2 </button></li> <li><button onclick = "renderPage(\'ludwinscene3\')"> ludwinscene3 </button></li> <li><button onclick = "renderPage(\'ludwinscene4\')"> ludwinscene4 </button><li> </ul>','img/sunset.jpg');
+
+new SceneConstructor ('ludwinscene1','Get ready for some hiking. The trail is covered in snow and you have no equipment, but some hiker a long time ago left some help. Choose carefully.','<ul> <li><button>clicks1</button></li> <li><button> clicks2 </button></li> <li><button> clicks3 </button></li> <li><button> clicks4 </button></li> </ul>','img/sunset.jpg' );
+
+new SceneConstructor ('ludwinscene2','Hello world','<ul> <li><button>clicksa1</button></li> <li><button> clicksa2 </button></li> <li><button> clicksa3 </button></li> <li><button> clicksa4 </button></li> </ul>','img/sunset.jpg' );
+
+new SceneConstructor ('ludwinscene3','Hello world','<ul> <li><button>clicksb1</button></li> <li><button> clicksb2 </button></li> <li><button> clicksb3 </button></li> <li><button> clicksb4 </button></li> </ul>','img/sunset.jpg' );
+
+new SceneConstructor ('ludwinscene4','Hello world','<ul> <li><button>clicksb1</button></li> <li><button> clicksb2 </button></li> <li><button> clicksb3 </button></li> <li><button> clicksb4 </button></li> </ul>','img/sunset.jpg' );
 
 
 // Uncomment the next line to see every scene in the book that is available to reference

@@ -16,20 +16,31 @@ body {
     height: 525px;
     border-radius: 8px;
     margin-top: 30px;
+    z-index: 1;
     
 }
 
 #divId {
-    position: absolute;
-
-    
-    margin-top:500px;
+    text-align: center;
+    /*margin-top: 250px;*/
 }
-#divId #textconstructor{
+#divId ul {
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 220px;
+}
+#divId ul li{
+    
+    display: inline-block;
+    margin:15px;
+    z-index: 2 ;
+
+}
+/* #divId #textconstructor{
     color: white;
     margin-left: 380px;
     margin-top: -200px;
-}
+} */
 #buttontree1{
     margin-left:800px;
     margin-top: 190px;
@@ -50,19 +61,17 @@ body {
 
 }
 #activeText {
+    text-align: center;
     position: absolute;
+    z-index: 3;
     color: white;
-    font-size: 30px;
-    z-index: 1;
+    font-size: 20px;
+    z-index: 3;
     width: 584px;
     margin-top: 50px;
-    margin-left: 255px;
-    background: black;
-    text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+
+    margin-left: 255px; 
+
 }
 #divId #button1 {
     position: absolute;
