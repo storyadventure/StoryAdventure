@@ -1,10 +1,10 @@
-#divId img {
+#googlepic {
     width: 200px;
     position: absolute;
     margin-left: 370px;
     z-index: 2;
     margin-top:-180px;
-}
+} 
 
 body {
     width: 960px;
@@ -21,13 +21,31 @@ body {
 
 #divId {
     position: absolute;
-    background-color: blue;
+    
     margin-top:500px;
 }
 #divId #textconstructor{
     color: white;
     margin-left: 380px;
     margin-top: -200px;
+}
+#buttontree1{
+    margin-left:800px;
+    margin-top: 190px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+#buttongraveyard{
+    margin-left: 840px;
+    background-color: black;
+    color: white;
+}
+#textree1 {
+    color:white;
+    margin-left: 375px;
+    margin-top: -200px;
+
 }
 #activeText {
     position: absolute;
