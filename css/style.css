@@ -21,6 +21,7 @@ body {
 
 #divId {
     position: absolute;
+
     
     margin-top:500px;
 }
@@ -46,19 +47,23 @@ body {
     margin-left: 375px;
     margin-top: -200px;
 
+
 }
 #activeText {
     position: absolute;
-    color:white;
+    color: white;
     font-size: 20px;
     z-index: 1;
+    width: 584px;
     margin-top: 50px;
+
     margin-left: 255px;
 }
 #divId #button1 {
     position: absolute;
     margin-left: 50px;
     margin-top: 200px;
+
 }
 footer {
     margin-top: 30px;
