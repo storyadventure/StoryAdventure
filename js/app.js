@@ -12,6 +12,7 @@ var hero = {
   armorHP: 0,
   items: [],
   scenesVisited: [],
+  attackPower: 10,
 };
 
 // This constructor should be a good starting point for 'scenes' within this story
@@ -233,4 +234,18 @@ function gainArmor(damage) {
 function giveItem(itemName){
   hero.items.push(itemName);
 
+};
+
+
+function battle(hero,enemy){
+  while((enemy.hitPoints > 0) && (hero.hitPoints > 0)){
+    doDamage(enemy.attackPower);
+    enemy.hitPoints = enemy.hitPoints - hero.attackPower;
+  }
+
+}
+
+var dragon = {
+  hitPoints: 100,
+  attackPower: 20,
 }
