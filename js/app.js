@@ -220,7 +220,20 @@ function gainArmor(damage) {
   }
 }
 
-function giveItem(itemName){
-  hero.items.push(itemName);
+///////////////////////////////// ITEMS /////////////////////////////////
 
+var itemAxe = 'Axe';
+var itemBook = 'Book';
+var itemCat = 'Cat';
+var itemHevArmor = 'Heavy Armor';
+var itemMedArmor = 'Medium Armor';
+var itemShield = 'Shield';
+var itemSword = 'Sword';
+var itemTools = 'Tools';
+var itemWood = 'Wood';
+var itemPotion = 'Heal Hit Points';
+
+function giveItem(itemName) {
+  hero.items.push(itemName);
+  document.getElementById('img-item-potion').setAttribute('style', 'opacity:1');
 }
