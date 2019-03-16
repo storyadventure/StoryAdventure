@@ -11,19 +11,8 @@ function resetHero(){
   hero.scenesVisited = [];
   hero.attackPower = 10;
   HB.setValue(100);
+  renderPage('start1');
 }
-
-
-if (localStorage.hero) {
-  loadHero();
-  alert('welcome back ' + hero.name);
-}
-else{
-  resetHero();
-  // this is the hero object, we will be adding items and; 
-
-};
-
 
 // This constructor should be a good starting point for 'scenes' within this story
 // Next add for the constructor is for a background image
@@ -64,7 +53,7 @@ new SceneConstructor('aaron1', 'Aaron\'s SAMPLE page', '<button onclick=\"render
 
 new SceneConstructor('ludwin1', 'Ludwin\'s SAMPLE page', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
 new SceneConstructor('ryan1', 'Ryan\'s SAMPLE page', '<button onclick=\"renderPage(\'Start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
-renderPage('start1');
+
 
 
 
@@ -104,6 +93,7 @@ function renderPage(sceneToRender) {
       pageHtml.innerHTML = book[i].html;
       bodyMain.appendChild(pageHtml);
       hero.scenesVisited.push(book[i].sceneNumber);
+      hero.currentScene = book[i].sceneNumber;
       var backgroundImage = document.createElement('img');
       backgroundImage.src = `${book[i].background}`;
       backgroundImage.id = 'backgroundimage';
@@ -112,6 +102,17 @@ function renderPage(sceneToRender) {
   }
 }
 
+if (localStorage.hero) {
+  loadHero();
+  debugger;
+  renderPage(hero.currentScene);
+  alert('welcome back ' + hero.name);
+}
+else{
+  resetHero();
+  // this is the hero object, we will be adding items and; 
+
+};
 
 
 
