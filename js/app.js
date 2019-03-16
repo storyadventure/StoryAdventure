@@ -280,6 +280,7 @@ function resetHero(){
   hero.scenesVisited = [];
   hero.attackPower = 10;
   HB.setValue(100);
+  AB.setValue(0);
   renderPage('start1');
 }
 
