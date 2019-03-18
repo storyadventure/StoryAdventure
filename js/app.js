@@ -28,7 +28,7 @@ new SceneConstructor('graveyard', 'You\'re dead.. Sorry! Not sorry!', '<button i
 
 /*------------------------------------RYAN's SCENES START-----------------------------------------*/
 
-new SceneConstructor('ryan1', 'You wake up with a huge headache.. You look around and you\'re in a cave. \"Is anyone there?\" All you hear is echo of your own voice.. You try to remember what happened but all you feel are the poundings in your head.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave2\')\">\r\n  Look around for anything useful\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave3\')\">\r\n  Explore East\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave4\')\">\r\n  Explore West\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave5\')\">\r\n  Scream For Help\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave1.jpg');
+new SceneConstructor('ryan1', 'You wake up with a huge headache.. You look around and you\'re in a cave. \"Is anyone there?\" All you hear is echo of your own voice.. You try to remember what happened but all you feel are the poundings in your head.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave2\')\">\r\n  Look around for anything useful\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave3\')\">\r\n  Explore East\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave4\')\">\r\n  Explore West\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave2\')\">\r\n  Explore South\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave1.jpg');
 
 
 
@@ -71,7 +71,7 @@ new SceneConstructor('ryanwoods1', 'You do the right thing and lead everyone out
 
 
 
-new SceneConstructor('ryanwoods2', 'You hear birds chirping as you travel down the trail. You feel hungry and tired.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods4\')\">\r\n  Continue on\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods5\')\">\r\n  Take a rest\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods4\')\">\r\n  ryanwoods4\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
+new SceneConstructor('ryanwoods2', 'You hear birds chirping as you travel down the trail. You feel hungry and tired.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods4\')\">\r\n  Continue on\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods5\')\">\r\n  Take a rest\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
 
 
 
@@ -95,19 +95,19 @@ new SceneConstructor('ryanwoods3', 'You walk North and notice a broken small sig
 
 
 
-new SceneConstructor('ryanwoods6', 'Slight fog seems to be forming around you. It\'s getting late and too late to turn back. You focus on getting out of the woods.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods11\')\">\r\n  ryanwoods11\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods10\')\">\r\n  Pick up the pace and walk faster \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods11\'), doDamage(50)\">\r\n  Search for food as you walk \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
+new SceneConstructor('ryanwoods6', 'Slight fog seems to be forming around you. It\'s getting late and too late to turn back. You focus on getting out of the woods.', '<ul>\r\n<li>\r\n<button onclick=\"renderPage(\'ryanwoods10\')\">\r\n  Pick up the pace and walk faster \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods11\'), doDamage(50)\">\r\n  Search for food as you walk \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
 
-new SceneConstructor('ryanwoods10', 'ryanwoods10', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods14\')\">\r\n  ryanwoods14\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods15\')\">\r\n  ryanwoods15\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods14\')\">\r\n  ryanwoods14\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n  <button onclick=\"renderPage(\'ryanwoods15\')\">\r\n  ryanwoods15\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
+new SceneConstructor('ryanwoods10', 'You walk as fast as you can but the fog catches up to you. You hear wings flapping and they start to get louder.. You look up to find a flock of bird circling above you. \"That can\'t be good..\"', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods14\')\">\r\n  ryanwoods14\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods15\')\">\r\n  ryanwoods15\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods14\')\">\r\n  ryanwoods14\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n  <button onclick=\"renderPage(\'ryanwoods15\')\">\r\n  ryanwoods15\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
 
-new SceneConstructor('ryanwoods14', 'You run as fast as you can but ', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit1\')\">\r\n  ryanwoodsexit1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
+new SceneConstructor('ryanwoods14', 'You run as fast as you can but you\'re unable to out run the birds. They attack you from behind as you do your best to protect your head.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit1\')\">\r\n  RUN! \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
 
 
 
 new SceneConstructor('ryanwoods7', 'You continue your journey North. You\'re feeling a bit guilty about leaving the group behind and fails to notice a sign next to the trail. The fog gets thicker around you as you go deeper into the woods. You feel an eerie vibe but it might just be the cold air...', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods11\'), doDamage(50)\">\r\n  Continue\r\n<\/button>\r\n  <\/li>\r\n\<\/ul>', 'img/ryanwoods5.jpg');
 
-new SceneConstructor('ryanwoods11', 'The fog gets heavy as you walk down the path.. \"CAWWWWW\" The loud caw surprises you and you look up. You can\'t see any birds but just from the amount of flapping, you can tell there\'s around 30 of them. You go into a full sprint the hill. Flapping gets louder behind you as you run. You trip on a rock while running and hit your head on a tree. You\'re a bit dazed and there\'s no way you can out run the birds...', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods15\')\">\r\n  Hide in a bush \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods14\')\">\r\n  Keep Running \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods5.jpg');
+new SceneConstructor('ryanwoods11', 'The fog gets heavy as you walk down the path.. \"CAWWWWW\" The loud caw surprises you and you look up. You can\'t see any birds but just from the amount of flapping, you can tell there\'s around 50 of them. You go into a full sprint down the hill. Flapping gets louder behind you as you run. You trip on a rock while running and hit your head on a tree. You\'re a bit dazed and there\'s no way you can out run the birds...', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods15\')\">\r\n  Hide in a bush \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods14\'), doDamage(30)\">\r\n  Keep Running \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods5.jpg');
 
-new SceneConstructor('ryanwoods15', 'You find a nearby bush to hide. You hear the flapping and cawing in the skies and they seem to have flown past you. You sigh with relif. You wait in the bush until they are all gone. ', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit1\')\">\r\n Run out of the woods! \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods5.jpg');
+new SceneConstructor('ryanwoods15', 'You find a nearby bush to hide. You hear the flapping and cawing in the skies and they seem to have flown past you. You sigh with relif. You wait in the bush until they are all gone.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit1\')\">\r\n Run out of the woods! \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods5.jpg');
 
 
 
@@ -147,13 +147,13 @@ new SceneConstructor('ryanrightvillage4', 'ryanrightvillage4', '<ul>\r\n<li>\r\n
 
 new SceneConstructor('ryanvillageexit', 'ryanvillageexit', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanvillagedeath2\')\">\r\n  ryanvillagedeath2\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanvillageexit.jpg');
 
-new SceneConstructor('ryanvillagedeath2', 'ryanvillagedeath2', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancrows2\')\">\r\n  ryancrows2\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanvillagedeath1.jpg');
+new SceneConstructor('ryanvillagedeath2', 'ryanvillagedeath2', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancrows2\')\">\r\n  ryancrows2\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanvillagedeath.jpg');
 
 new SceneConstructor('ryancrows2', 'ryancrows2', '', 'img/ryancrows2.jpg');
 
 new SceneConstructor('ryancrows1', 'ryancrows1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanvillagedeath1\')\">\r\n  ryanvillagedeath1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanvillagedeath1\')\">\r\n  ryanvillagedeath1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanvillagedeath2\')\">\r\n  ryanvillagedeath2\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancrows1.jpg');
 
-new SceneConstructor('ryanvillagedeath1', 'ryanvillagedeath1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanroad1\')\">\r\n  ryanroad1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanboat1\')\">\r\n  ryanboat1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanvillagedeath1.jpg');
+new SceneConstructor('ryanvillagedeath1', 'ryanvillagedeath1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanroad1\')\">\r\n  ryanroad1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanboat1\')\">\r\n  ryanboat1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanvillagedeath.jpg');
 
 new SceneConstructor('ryancrows3', 'ryancrows3', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanroad1\')\">\r\n  ryanroad1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanboat1\')\">\r\n  ryanboat1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancrows2.jpg');
 
