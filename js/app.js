@@ -15,6 +15,219 @@ function SceneConstructor(sceneNumber, text, html, background) {
   book.push(this);
 }
 
+
+/*------------------------------------START, DEAD SCENES-----------------------------------------*/
+
+new SceneConstructor('start1', 'Choose Your Own Adventure', '<ul><li><img onclick=\"renderPage(\'aaron1\')\" src=\'img\/warrior.jpg\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'lee1\')\" src=\'img\/archer.jpg\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'ludwinmain\')\" src=\'img\/mage.jpg\' class=\'paths\'><\/img>\r\n</li> <li><img onclick=\"renderPage(\'ryan1\')\" src=\'img\/rogue.jpg\' class=\'paths\'><\/img></li></ul>', 'img/startingscreen.jpg');
+
+new SceneConstructor('graveyard', 'You\'re dead.. Sorry! Not sorry!', '<button id = "buttongraveyard" onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/graveyard.jpg');
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+
+/*------------------------------------RYAN's SCENES START-----------------------------------------*/
+
+new SceneConstructor('ryan1', 'You wake up with a huge headache.. You look around and you\'re in a cave. \"Is anyone there?\" All you hear is echo of your own voice..', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave2\')\">\r\n  Look Around\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave3\')\">\r\n  Explore East\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave4\')\">\r\n  Explore West\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave5\')\">\r\n  Scream For Help\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave1.jpg');
+
+
+
+new SceneConstructor('ryancave2', 'ryancave2', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave6\')\">\r\n  ryancave6\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave6\')\">\r\n  ryancave6\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave6\')\">\r\n  ryancave6\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave2.jpg');
+
+new SceneConstructor('ryancave6', 'ryancave6', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave10\')\">\r\n  ryancave10\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave10\')\">\r\n  ryancave10\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave10\')\">\r\n  ryancave10\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave2.jpg');
+
+new SceneConstructor('ryancave10', 'ryancave10', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancaveexit1\')\">\r\n  ryancaveexit1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancaveexit1\')\">\r\n  ryancaveexit1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave3\')\">\r\n  ryancave3\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave2.jpg');
+
+
+
+new SceneConstructor('ryancave3', 'ryancave3', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave7\')\">\r\n  ryancave7\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave7\')\">\r\n  ryancave7\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave7\')\">\r\n  ryancave7\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave3.jpg');
+
+new SceneConstructor('ryancave7', 'ryancave7', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave11\')\">\r\n  ryancave11\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave11\')\">\r\n  ryancave11\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave11\')\">\r\n  ryancave11\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave3.jpg');
+
+new SceneConstructor('ryancave11', 'ryancave11', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancaveexit1\')\">\r\n  ryancaveexit1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancaveexit1\')\">\r\n  ryancaveexit1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave4\')\">\r\n  ryancave4\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave3.jpg');
+
+
+
+new SceneConstructor('ryancave4', 'ryancave4', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave8\')\">\r\n  ryancave8\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave8\')\">\r\n  ryancave8\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave8\')\">\r\n  ryancave8\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave4.jpg');
+
+new SceneConstructor('ryancave8', 'ryancave8', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave12\')\">\r\n  ryancave12\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave12\')\">\r\n  ryancave12\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave12\')\">\r\n  ryancave12\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave4.jpg');
+
+new SceneConstructor('ryancave12', 'ryancave12', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancaveexit1\')\">\r\n  ryancaveexit1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancaveexit1\')\">\r\n  ryancaveexit1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave5\')\">\r\n  ryancave5\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave4.jpg');
+
+
+
+new SceneConstructor('ryancave5', 'ryancave5', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave9\')\">\r\n  ryancave9\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave9\')\">\r\n  ryancave9\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave9\')\">\r\n  ryancave9\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave5.jpg');
+
+new SceneConstructor('ryancave9', 'ryancave9', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave13\')\">\r\n  ryancave13\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave13\')\">\r\n  ryancave13\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave13\')\">\r\n  ryancave13\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave5.jpg');
+
+new SceneConstructor('ryancave13', 'ryancave13', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancaveexit1\')\">\r\n  ryancaveexit1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancaveexit1\')\">\r\n  ryancaveexit1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancaveexit1\')\">\r\n  ryancaveexit1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave5.jpg');
+
+
+
+new SceneConstructor('ryancaveexit1', 'ryancaveexit1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods1\')\">\r\n  ryanwoods1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancaveexit1.jpg');
+
+new SceneConstructor('ryanwoods1', 'ryanwoods1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods2\')\">\r\n  ryanwoods2\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods3\')\">\r\n  ryanwoods3\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods2\')\">\r\n  ryanwoods2\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n  <button onclick=\"renderPage(\'ryanwoods3\')\">\r\n  ryanwoods3\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods1.jpg');
+
+
+
+new SceneConstructor('ryanwoods2', 'ryanwoods2', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods4\')\">\r\n  ryanwoods4\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods5\')\">\r\n  ryanwoods5\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods4\')\">\r\n  ryanwoods4\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n  <button onclick=\"renderPage(\'ryanwoods3\')\">\r\n  ryanwoods3\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
+
+
+
+new SceneConstructor('ryanwoods4', 'ryanwoods4', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods8\')\">\r\n  ryanwoods8\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods9\')\">\r\n  ryanwoods9\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods8\')\">\r\n  ryanwoods8\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n  <button onclick=\"renderPage(\'ryanwoods9\')\">\r\n  ryanwoods9\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
+
+new SceneConstructor('ryanwoods8', 'ryanwoods8', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods12\')\">\r\n  ryanwoods12\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods13\')\">\r\n  ryanwoods13\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods12\')\">\r\n  ryanwoods12\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n  <button onclick=\"renderPage(\'ryanwoods13\')\">\r\n  ryanwoods13\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
+
+new SceneConstructor('ryanwoods12', 'ryanwoods12', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit1\')\">\r\n  ryanwoodsexit1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
+
+
+
+new SceneConstructor('ryanwoods5', 'ryanwoods5', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods8\')\">\r\n  ryanwoods8\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods9\')\">\r\n  ryanwoods9\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods8\')\">\r\n  ryanwoods8\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n  <button onclick=\"renderPage(\'ryanwoods9\')\">\r\n  ryanwoods9\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods4.jpg');
+
+new SceneConstructor('ryanwoods9', 'ryanwoods9', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods12\')\">\r\n  ryanwoods12\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods13\')\">\r\n  ryanwoods13\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods12\')\">\r\n  ryanwoods12\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n  <button onclick=\"renderPage(\'ryanwoods13\')\">\r\n  ryanwoods13\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods4.jpg');
+
+new SceneConstructor('ryanwoods13', 'ryanwoods13', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit1\')\">\r\n  ryanwoodsexit1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods4.jpg');
+
+
+
+new SceneConstructor('ryanwoods3', 'ryanwoods3', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods6\')\">\r\n  ryanwoods6\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods7\')\">\r\n  ryanwoods7\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods6\')\">\r\n  ryanwoods6\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n  <button onclick=\"renderPage(\'ryanwoods2\')\">\r\n  ryanwoods2\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
+
+
+
+new SceneConstructor('ryanwoods6', 'ryanwoods6', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods11\')\">\r\n  ryanwoods11\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods10\')\">\r\n  ryanwoods10\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods11\')\">\r\n  ryanwoods11\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n  <button onclick=\"renderPage(\'ryanwoods10\')\">\r\n  ryanwoods10\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
+
+new SceneConstructor('ryanwoods10', 'ryanwoods10', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods14\')\">\r\n  ryanwoods14\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods15\')\">\r\n  ryanwoods15\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods14\')\">\r\n  ryanwoods14\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n  <button onclick=\"renderPage(\'ryanwoods15\')\">\r\n  ryanwoods15\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
+
+new SceneConstructor('ryanwoods14', 'ryanwoods14', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit1\')\">\r\n  ryanwoodsexit1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
+
+
+
+new SceneConstructor('ryanwoods7', 'ryanwoods7', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods11\')\">\r\n  ryanwoods11\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods10\')\">\r\n  ryanwoods10\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods11\')\">\r\n  ryanwoods11\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n  <button onclick=\"renderPage(\'ryanwoods10\')\">\r\n  ryanwoods10\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods5.jpg');
+
+new SceneConstructor('ryanwoods11', 'ryanwoods11', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods14\')\">\r\n  ryanwoods14\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods15\')\">\r\n  ryanwoods15\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods14\')\">\r\n  ryanwoods14\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n  <button onclick=\"renderPage(\'ryanwoods15\')\">\r\n  ryanwoods15\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods5.jpg');
+
+new SceneConstructor('ryanwoods15', 'ryanwoods15', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit1\')\">\r\n  ryanwoodsexit1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods5.jpg');
+
+
+
+new SceneConstructor('ryanwoodsexit1', 'ryanwoodsexit1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit2\')\">\r\n  ryanwoodsexit2\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanchurch1\')\">\r\n  ryanchurch1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoodsexit1.jpg');
+
+new SceneConstructor('ryanchurch1', 'ryanchurch1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit2\')\">\r\n  ryanwoodsexit2\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanchurch1.jpg');
+
+new SceneConstructor('ryanwoodsexit2', 'ryanwoodsexit2', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanfog1\')\">\r\n  ryanfog1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoodsexit1.jpg');
+
+new SceneConstructor('ryanfog1', 'ryanfog1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanvillagepath1\')\">\r\n  ryanvillagepath1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanfog1.jpg');
+
+new SceneConstructor('ryanvillagepath1', 'ryanvillagepath1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanleftvillage1\')\">\r\n  ryanleftvillage1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanrightvillage2\')\">\r\n  ryanrightvillage2\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanvillagepath1.jpg');
+
+
+
+
+
+new SceneConstructor('ryanleftvillage1', 'ryanleftvillage1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanleftvillage2\')\">\r\n  ryanleftvillage2\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanleftvillage3\')\">\r\n  ryanleftvillage3\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanleftvillage1.jpg');
+
+new SceneConstructor('ryanleftvillage2', 'ryanleftvillage2', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanleftvillage4\')\">\r\n  ryanleftvillage4\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanleftvillage3\')\">\r\n  ryanleftvillage3\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanleftvillage1.jpg');
+
+new SceneConstructor('ryanleftvillage3', 'ryanleftvillage3', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanleftvillage4\')\">\r\n  ryanleftvillage4\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanleftvillage4\')\">\r\n  ryanleftvillage4\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanleftvillage1.jpg');
+
+new SceneConstructor('ryanleftvillage4', 'ryanleftvillage4', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancrows1\')\">\r\n  ryancrows1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanvillageexit\')\">\r\n  ryanvillageexit\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanleftvillage1.jpg');
+
+
+
+new SceneConstructor('ryanrightvillage1', 'ryanrightvillage1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanrightvillage2\')\">\r\n  ryanrightvillage2\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanrightvillage3\')\">\r\n  ryanrightvillage3\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanrightvillage1.jpg');
+
+new SceneConstructor('ryanrightvillage2', 'ryanrightvillage2', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanrightvillage4\')\">\r\n  ryanrightvillage4\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanrightvillage4\')\">\r\n  ryanrightvillage4\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanrightvillage1.jpg');
+
+new SceneConstructor('ryanrightvillage3', 'ryanrightvillage3', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanrightvillage2\')\">\r\n  ryanrightvillage2\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanrightvillage4\')\">\r\n  ryanrightvillage4\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanrightvillage1.jpg');
+
+new SceneConstructor('ryanrightvillage4', 'ryanrightvillage4', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancrows1\')\">\r\n  ryancrows1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanvillageexit\')\">\r\n  ryanvillageexit\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanrightvillage1.jpg');
+
+
+
+new SceneConstructor('ryanvillageexit', 'ryanvillageexit', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanvillagedeath2\')\">\r\n  ryanvillagedeath2\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanvillageexit.jpg');
+
+new SceneConstructor('ryanvillagedeath2', 'ryanvillagedeath2', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancrows2\')\">\r\n  ryancrows2\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanvillagedeath1.jpg');
+
+new SceneConstructor('ryancrows2', 'ryancrows2', '', 'img/ryancrows2.jpg');
+
+new SceneConstructor('ryancrows1', 'ryancrows1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanvillagedeath1\')\">\r\n  ryanvillagedeath1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanvillagedeath1\')\">\r\n  ryanvillagedeath1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanvillagedeath2\')\">\r\n  ryanvillagedeath2\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancrows1.jpg');
+
+new SceneConstructor('ryanvillagedeath1', 'ryanvillagedeath1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanroad1\')\">\r\n  ryanroad1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanboat1\')\">\r\n  ryanboat1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanvillagedeath1.jpg');
+
+new SceneConstructor('ryancrows3', 'ryancrows3', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanroad1\')\">\r\n  ryanroad1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanboat1\')\">\r\n  ryanboat1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancrows2.jpg');
+
+
+
+new SceneConstructor('ryanboat1', 'ryanboat1', '', 'img/ryanboat1.jpg');
+
+new SceneConstructor('ryanroad1', 'ryanroad1', '', 'img/ryanroad1.jpg');
+
+
+/*------------------------------------RYAN's SCENES END-----------------------------------------*/
+
+
+/*------------------------------------RYAN's EXTENDED SCENES START-----------------------------------------*/
+
+
+// new SceneConstructor('ryanboat2', 'ryanboat2', '', 'img/ryanboat1.jpg');
+
+// new SceneConstructor('ryanboat3', 'ryanboat3', '', 'img/ryanboat1.jpg');
+
+
+
+// new SceneConstructor('ryanboat3', 'ryanboat3', '', 'img/ryanboat2.jpg');
+
+// new SceneConstructor('ryanboat3', 'ryanboat3', '', 'img/ryanboat2.jpg');
+
+// new SceneConstructor('ryanboat3', 'ryanboat3', '', 'img/ryanboat2.jpg');
+
+// new SceneConstructor('ryanboat3', 'ryanboat3', '', 'img/ryanboat2.jpg');
+
+
+
+// new SceneConstructor('ryanboatcrash1', 'ryanboatcrash1', '', 'img/ryanboatcrash1.jpg');
+
+// new SceneConstructor('ryandirtroad1', 'ryandirtroad1', '', 'img/ryandirtroad1.jpg');
+
+
+
+
+
+// new SceneConstructor('ryanroad2', 'ryanroad2', '', 'img/ryanroad1.jpg');
+
+
+
+// new SceneConstructor('ryanroad3', 'ryanroad3', '', 'img/ryanroad1.jpg');
+
+// new SceneConstructor('ryanleopard1', 'ryanleopard1', '', 'img/ryanleopard1.jpg');
+
+// new SceneConstructor('ryanleopard2', 'ryanleopard2', '', 'img/ryanleopard1.jpg');
+
+// new SceneConstructor('ryanleopard3', 'ryanleopard3', '', 'img/ryanleopard1.jpg');
+
+// new SceneConstructor('ryanroad6', 'ryanroad6', '', 'img/ryanroad2.jpg');
+
+
+
+// new SceneConstructor('ryanroad4', 'ryanroad4', '', 'img/ryanroad2.jpg');
+
+// new SceneConstructor('ryanroad5', 'ryanroad5', '', 'img/ryanroad2.jpg');
+
+// new SceneConstructor('ryanlioness1', 'ryanlioness1', '', 'img/lioness1.jpg');
+
+// new SceneConstructor('ryanlioness2', 'ryanlioness2', '', 'img/lioness1.jpg');
+
+
+
+// new SceneConstructor('ryanlongroad1', 'ryanlongroad1', '', 'img/longroad1.jpg');
+
+
+
+
+/*------------------------------------RYAN's EXTENDED SCENES END-----------------------------------------*/
+
+
+
 new SceneConstructor('lee1', 'You walk deep into the jungle. The surroundings are dark and teeming with life. As you look around you see the glint of some large animals eyes.  A large jungle cat slinks into view. You see the glint of gold from a necklace the big cat is wearing. It locks eyes with you and begins to slowly walk away. What do you do?', '<ul>\r\n<li><button onclick=\"renderPage(\'lee2\')\">Follow the leopard deeper into the jungle\r\n<\/button><\/li>\r\n<li><button onclick=\"renderPage(\'lee3b\'), doDamage(35)\">\r\n Attack the leopard and try to take the necklace from its cold lifeless body\r\n<\/button><\/li>\r\n<li><button onclick=\"renderPage(\'lee4\')\">\r\n  Search the area for clues\r\n<\/button><\/li>\r\n<\/ul>', 'img/forestbg.jpg');
 
 new SceneConstructor('lee2', 'The big cat continues to walk ahead of you. Occassionally it glances back at you as if to make sure that you are following it. The forest eventually opens into a wide clearing, the sun is breaking through the dark clouds which have followed you from your homelands to this blighted land. You get closer and closer to the big cat until you can hear its soft breathing. It\'s continuing to hold eye contact with you until suddenly the jungle predator tenses and seems about to attack! What do you do?!', '<ul>\r\n<li><button onclick=\"renderPage(\'lee3a\'), doDamage(35)\">Quickly attack before the animal has a chance to prepare\r\n<\/button><\/li>\r\n\r\n<li><button onclick=\"renderPage(\'lee5\'), giveItem(\'catlove\')\">Wait a moment to see what this dangerous adversary does\r\n<\/button><\/li>\r\n<\/ul>', 'img/forestbg.jpg');
@@ -38,15 +251,10 @@ new SceneConstructor('lee8', 'You have answered the fairys riddle correctly!\r\n
 new SceneConstructor('lee9', 'A coursing waterfall! As you leave the last identifiable part of the woods you see a large river spilling over the edge of a sheer cliff face. The sound is almost deafening and you are totally absorbed in the experience of seeing this mighty body of water rushing past you, over the edge of this ridgeline and then crashing into the mist below. \r\n\r\nYou have no idea how you will get down, but there is no other way since this ridge extends as far as you can see in either direction. If you had a boat you can at least try to ride down the waterfall but without a boat you will be jumping and hoping for the best.', '<ul>\r\n<li><button onclick=\"renderPage(\'lee10\'), doDamage(100)\">Jump for it!<\/button><\/li>\r\n<li><button onclick=\"renderPage(\'lee10\'), doDamage(50)\">Ride your boat down<\/button><\/li>\r\n<\/ul>', 'img/waterfallbg.jpg');
 
 
-new SceneConstructor('start1', 'Choose Your Own Adventure', '<ul><li><img onclick=\"renderPage(\'aaron1\')\" src=\'img\/warrior.jpg\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'lee1\')\" src=\'img\/archer.jpg\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'ludwinmain\')\" src=\'img\/mage.jpg\' class=\'paths\'><\/img>\r\n</li> <li><img onclick=\"renderPage(\'ryan1\')\" src=\'img\/rogue.jpg\' class=\'paths\'><\/img></li></ul>', 'img/startingscreen.jpg');
-
-new SceneConstructor('graveyard', 'You\'re dead.. Sorry! Not sorry!', '<button id = "buttongraveyard" onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/graveyard.jpg');
-
 new SceneConstructor('aaron1', 'Aaron\'s SAMPLE page', '<button onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
 
 
 new SceneConstructor('ludwin1', 'Ludwin\'s SAMPLE page', '<button onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
-new SceneConstructor('ryan1', 'Ryan\'s SAMPLE page', '<button onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
 
 
 //ludwin's scene constructor
