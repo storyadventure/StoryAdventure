@@ -230,7 +230,7 @@ new SceneConstructor('ryanroad1', 'ryanroad1', '', 'img/ryanroad1.jpg');
 
 
 
-=======
+// =======
 // Lee's scenes
 
 function gainCat() {
@@ -528,22 +528,22 @@ var leeJungleCat = {
 var ryanSingleCrow = {
   hitPoints: 15,
   attackPower: 2,
-}
+};
 
 var ryanMurderOfCrows = {
   hitPoints: 45,
   attackPower: 7,
-}
+};
 
 var ryanLeopard = {
   hitPoints: 65,
   attackPower: 8,
+};
 
 var leeGiant = {
   hitPoints: 100,
   attackPower: 15,
-
-}
+};
 
 
 function saveHero() {
