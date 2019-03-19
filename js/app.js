@@ -233,7 +233,7 @@ new SceneConstructor('ryanroad1', 'ryanroad1', '', 'img/ryanroad1.jpg');
 function gainCat() {
   hero.items.push('catlove');
   hero.attackPower += 20;
-  alert('The cat will join you as an ally')
+  alert('The cat will join you as an ally');
 }
 function gainMediumArmor() {
   giveItem('mediumarmor');
@@ -511,28 +511,34 @@ var potionOBJ = new ItemOBJ('Health Potoin', 'img-item-potion');
 
 
 ///////////////////////////////// ITEM FUNCTIONS /////////////////////////////////
+/*
+this function I am leaving in for testing purposes, but so far I haven't found a reason to actually use this function
 
-function giveItem(OBJ) {
-  var itemOBJname = OBJ.name;
-  var itemOBJid = OBJ.id;
-  if(hero.items !== itemOBJname) {
-    hero.items.push(itemOBJname);
-    document.getElementById(itemOBJid).setAttribute('style', 'opacity:1');
-  } else {alert(`${hero.characterName} you already have ${itemOBJname} in your inventory.`);
+function checkItem(itemOBJ) {
+  for(var i = 0; i < hero.items.length; i++) {
+    console.log('What is this?: ', i, hero.items[i].name);
+    if(hero.items[i].name === itemOBJ.name) {
+      return true;
+    }
   }
-};
+}
+*/
+function giveItem(OBJ) {
+  var itemOBJid = OBJ.id;
+  hero.items.push(OBJ);
+  document.getElementById(itemOBJid).setAttribute('style', 'opacity:1');
+}
 // example call giveItem(axeOBJ);
 
-function loseItem(itemOBJname, itemOBJid) {
-  if(hero.items === itemOBJname) {
-    // delete hero.items[dynamicIndexOfItem]; ?? the hero.item index will be hard to reference if it's always changing
-    document.getElementById(itemOBJid).setAttribute('style', 'opacity:0.3');
+function loseItem(loseOBJ) {
+  for(var i = 0; i < hero.items.length; i++) {
+    if(hero.items[i].name === loseOBJ.name) {
+      hero.items.splice(i, 1);
+    }
   }
+  document.getElementById(loseOBJ.id).setAttribute('style', 'opacity:0.3');
 }
-
-function useItem(itemOBJname, itemOBJid) {
-  return loseItem(itemOBJname, itemOBJid);
-}
+// example call loseItem(axeOBJ);
 
 ///////////////////// ITEM EVENT LISTENER AND CLICK FUNCTIONS /////////////////////
 
