@@ -15,6 +15,7 @@ function SceneConstructor(sceneNumber, text, html, background) {
   book.push(this);
 }
 
+
 // Lee's scenes
 
 function gainCat() {
@@ -86,15 +87,17 @@ new SceneConstructor('ryan1', 'Ryan\'s SAMPLE page', '<button onclick=\"renderPa
 
 
 //ludwin's scene constructor
-new SceneConstructor('ludwinmain', 'It is a nice day in the little town of Oldtown, our Hero is wandering around town trying to find clues of how to get to the forest. It seems that nobody has any idea how to get to the forest, there are a few trails that you can take, choose carefully! nobody knows what kind of dangers this trails hide. there is a reason why the townspeople do not live the safety of their town.', '<ul> <li><button onclick = "renderPage(\'ludwinscene1\')">Trail1</button></li> <li><button onclick = "renderPage(\'ludwinscene2\')"> ludwinscene2 </button></li> <li><button onclick = "renderPage(\'ludwinscene3\')"> ludwinscene3 </button></li> <li><button onclick = "renderPage(\'ludwinscene4\')"> ludwinscene4 </button><li> </ul>', 'img/sunset.jpg');
 
-new SceneConstructor('ludwinscene1', 'Get ready for some hiking. The trail is covered in snow and you have no equipment, but some hiker a long time ago left some help. Choose carefully.', '<ul> <li><button>clicks1</button></li> <li><button> clicks2 </button></li> <li><button> clicks3 </button></li> <li><button> clicks4 </button></li> </ul>', 'img/sunset.jpg');
+new SceneConstructor ('ludwinmain','Your plane crashes in a remote island on the pacific ocean, you  walk around trying to find a sign of life but you get no answer. You decide to explore close to shore and discover remnants of a small camp. Do you want to make camp or venture deep in the islnad to find more clues about who made this camp? ','<ul> <li><button onclick = "renderPage(\'makecamp\')">Make camp?</button></li> <li><button onclick = "renderPage(\'exploremore\')"> Explore more? </button></li> </ul>','img/sunset.jpg');
 
-new SceneConstructor('ludwinscene2', 'Hello world', '<ul> <li><button>clicksa1</button></li> <li><button> clicksa2 </button></li> <li><button> clicksa3 </button></li> <li><button> clicksa4 </button></li> </ul>', 'img/sunset.jpg');
+new SceneConstructor ('makecamp','You find helpful items to build a survival camp, you feel that you are going to make it and decide to close your eyes for the night. Suddnly you hear a weird noise that you can\'t make up and is getting louder and louder, you feel that you need to find out where the noise is coming from but you also don\'t want to leave the safety of your shelter.','<ul> <li><button onclick = "renderPage(\'explore\')">Explore.</button></li> <li><button onclick = "renderPage(\'waititout\'> Wait it out.</button></li> </ul>','img/sunset.jpg' );
 
-new SceneConstructor('ludwinscene3', 'Hello world', '<ul> <li><button>clicksb1</button></li> <li><button> clicksb2 </button></li> <li><button> clicksb3 </button></li> <li><button> clicksb4 </button></li> </ul>', 'img/sunset.jpg');
+new SceneConstructor ('exploremore','You have been walking for a few hours trhough the dense jungle in the island and have found no more clues of more inhabitants, is getting dark and have not eaten for quite a while, sudenly you run into a wild boar is small enough that you think you can take it. Do you want to try to hunt it or find something easy to eat.','<ul> <li><button>Hunt.</button></li> <li><button> Forage </button></li> </ul>','img/sunset.jpg' );
 
-new SceneConstructor('ludwinscene4', 'Hello world', '<ul> <li><button>clicksb1</button></li> <li><button> clicksb2 </button></li> <li><button> clicksb3 </button></li> <li><button> clicksb4 </button></li> </ul>', 'img/sunset.jpg');
+new SceneConstructor ('explore','Hello world','<ul> <li><button>clicksb1</button></li> <li><button> clicksb2 </button></li> <li><button> clicksb3 </button></li> <li><button> clicksb4 </button></li> </ul>','img/sunset.jpg' );
+
+new SceneConstructor ('waititout','Hello world','<ul> <li><button>clicksb1</button></li> <li><button> clicksb2 </button></li> <li><button> clicksb3 </button></li> <li><button> clicksb4 </button></li> </ul>','img/sunset.jpg' );
+
 
 
 // Uncomment the next line to see every scene in the book that is available to reference
