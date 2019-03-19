@@ -32,7 +32,7 @@ new SceneConstructor('ryan1', 'You wake up with a huge headache.. You look aroun
 
 
 
-new SceneConstructor('ryancave2', 'You notice a pile of garbage and an exit leading outside at the top. You also see something shiny in the middle of the pile.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave10\'), doDamage(10)\">\r\n  Climb to the top\r\<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave6\'), giveItem(\'Sword\')\">\r\n  Retrieve shiny object\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave3\')\">\r\n  Ignore the pile\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave2.jpg');
+new SceneConstructor('ryancave2', 'There\'s nothing around you but rocks. You follow the sound of water trickling thinking it would lead you to an exit. You come to a room with water reaching up to your knees. You notice a pile of garbage and an exit leading outside at the top. You also see something shiny in the middle of the pile.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave10\'), doDamage(10)\">\r\n  Climb to the top\r\<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave6\'), giveItem(\'Sword\')\">\r\n  Retrieve shiny object\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave3\')\">\r\n  Ignore the pile\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave2.jpg');
 
 new SceneConstructor('ryancave6', 'You find a rugged sword. It\'s old, but still useful in case of a battle.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave10\'), doDamage(10)\">\r\n  Continue to search pile\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave10\'), doDamage(10)\">\r\n  Try to climb to the top\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave3\')\">\r\n  Ignore the pile\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave2.jpg');
 
@@ -50,9 +50,9 @@ new SceneConstructor('ryancave11', 'You reach out slowly... expecting the skelet
 
 new SceneConstructor('ryancave4', 'You continue on and feel a cold breeze.. You follow the breeze and reach an exit but there is nothing but ocean. You notice something floating in the water.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave8\'), giveItem(\'Heal Hit Points\')\">\r\n  Reach for the object\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave5\')\">\r\n  Ignore it.\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave5\')\">\r\n  Look for an exit\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave4.jpg');
 
-new SceneConstructor('ryancave8', 'You reach down and pick up a health potion. \"This will be useful later..\" You put it in your pocket and turn around.. you hear a faint cawing in the distance. You quickly turn around to see a crow flying towards your direction.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave12\'), doDamage(15)\">\r\n  Watch the crow\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave12\'), doDamage(15)\">\r\n Throw a rock\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave5\')\">\r\n  Trun around and run\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave4.jpg');
+new SceneConstructor('ryancave8', 'You reach down and pick up a health potion. \"This will be useful later..\" You put it in your pocket and turn around.. you hear a faint cawing in the distance. You quickly turn around to see a crow flying towards your direction.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave12\'), battle(hero,ryanSingleCrow)\">\r\n  Watch the crow\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave12\'), battle(hero,ryanSingleCrow)\">\r\n Throw a rock\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryancave5\')\">\r\n  Trun around and run\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave4.jpg');
 
-new SceneConstructor('ryancave12', 'As the crow flies closer, you notice that something isn\'t right. It\'s eyes are hazy and the body seems decayed. It attacks you as you run back into the cave. You turn around to see that it\'s just sitting outside the cave as if it\'s waiting for you to come back out again.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave5\')\">\r\n  Go back into the cave\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave4.jpg');
+new SceneConstructor('ryancave12', 'As the crow flies closer, you notice that something isn\'t right. Its eyes are hazy and it seems to be flying directly towards you. You swing at it and misses and it scratches at your face. Your next swing is a direct hit and the bird hits the floor with a thud. \"Is it blind..? Why was it so angry?\" You wonder as you take a closer look. You examine the body and you turn pale from fear. The flesh looks decayed and you can see maggots crawling out of the crow\'s eyes.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryancave5\')\">\r\n  Run back into the cave \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryancave4.jpg');
 
 
 
@@ -75,19 +75,19 @@ new SceneConstructor('ryanwoods2', 'You hear birds chirping as you travel down t
 
 
 
-new SceneConstructor('ryanwoods4', 'You stumble across the rough trail and hear a faint cawing in the back. You continue on faster hoping to make it out of the woods before dark. You find some berries on the way. You are exhuasted.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods8\'), healDamage(30)\">\r\n  Eat the berries and continue\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods8\')\">\r\n  Don\'t eat the berries and continue\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods9\'), doDamage(15)\">\r\n  Take a break\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
+new SceneConstructor('ryanwoods4', 'You stumble across the rough trail and hear a faint cawing in the back. You continue on faster hoping to make it out of the woods before dark. You find some berries on the way. You are exhuasted.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods8\'), healDamage(30)\">\r\n  Eat the berries and continue\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods8\')\">\r\n  Don\'t eat the berries and continue\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods9\'), battle(hero,ryanMurderOfCrows)\">\r\n  Take a break \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
 
-new SceneConstructor('ryanwoods8', 'You start to hear cawing in the back. As if it\'s following you.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods12\')\">\r\n  Ignore it and continue\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods13\'), doDamage(20)\">\r\n  Turn around to investigate\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
+new SceneConstructor('ryanwoods8', 'You start to hear cawing in the back. As if it\'s following you.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods12\')\">\r\n  Ignore it and continue\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods13\'), battle(hero,ryanMuderofCrows)\">\r\n  Turn around to investigate\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
 
 new SceneConstructor('ryanwoods12', 'You hear a faint screaming in the back and more cawing. You don\'t care to go back and start to run', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit1\')\">\r\n  RUN! \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
 
 
 
-new SceneConstructor('ryanwoods5', 'You wake up to the sounds of wings flapping and realized you\'ve fallen asleep. You see fog in the distance. The flapping gets louder. You wonder if the birds are flying away from the fog.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods8\')\">\r\n  Start running \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods9\'), doDamage(15)\">\r\n Realax, they\'re just birds \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods4.jpg');
+new SceneConstructor('ryanwoods5', 'You wake up to the sounds of wings flapping and realized you\'ve fallen asleep. You see fog in the distance. The flapping gets louder. You wonder if the birds are flying away from the fog.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods8\')\">\r\n  Start running away in panic \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods9\'), battle(hero,ryanMurderOfCrows)\">\r\n You don\'t want to rush. Take your time \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods4.jpg');
 
-new SceneConstructor('ryanwoods9', 'You\'re sitting on a rock slowly gathering yourself.. The fog creeps down the woods towards your location. Suddenly you are attacked by a flock of crows. You swing at one and it hits the ground.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods12\')\">\r\n  RUN! \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods13\'), doDamage(20)\">\r\n  Swing at the brids again \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods4.jpg');
+new SceneConstructor('ryanwoods9', 'You\'re sitting on a rock slowly gathering yourself.. The fog creeps down the woods towards your location. Suddenly you are attacked by a flock of crows. You swing at one and it hits the ground.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods12\')\">\r\n  RUN! \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods13\'), battle(hero,ryanMurderOfCrows)\">\r\n  Swing at the brids again \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods4.jpg');
 
-new SceneConstructor('ryanwoods13', 'The fog quickly envelopes you as birds attack you from every direction. You catch a glimpse of one of them and their eyes are white and bodies resemble decayed flesh.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit1\')\">\r\n  RUN! \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods4.jpg');
+new SceneConstructor('ryanwoods13', 'The fog quickly envelopes you as birds attack you from every direction. You catch a glimpse of one of them and their eyes are white and bodies resemble decayed flesh. You swing around blindly and you hear a few of them hit the ground. There\'s way too many.. You can\'t fight them all.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit1\')\">\r\n  RUN! \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods4.jpg');
 
 
 
@@ -95,17 +95,17 @@ new SceneConstructor('ryanwoods3', 'You walk North and notice a broken small sig
 
 
 
-new SceneConstructor('ryanwoods6', 'Slight fog seems to be forming around you. It\'s getting late and too late to turn back. You focus on getting out of the woods.', '<ul>\r\n<li>\r\n<button onclick=\"renderPage(\'ryanwoods10\')\">\r\n  Pick up the pace and walk faster \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods11\'), doDamage(50)\">\r\n  Search for food as you walk \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
+new SceneConstructor('ryanwoods6', 'Slight fog seems to be forming around you. It\'s getting late and too late to turn back. You focus on getting out of the woods.', '<ul>\r\n<li>\r\n<button onclick=\"renderPage(\'ryanwoods10\')\">\r\n  Pick up the pace and walk faster \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods11\'), doDamage(10)\">\r\n  Search for food as you walk \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
 
-new SceneConstructor('ryanwoods10', 'You walk as fast as you can but the fog catches up to you. You hear wings flapping and they start to get louder.. You look up to find a flock of bird flying towards your direction. \"That can\'t be good..\"', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods14\'), doDamage(30)\">\r\n  Try to outrun the birds \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods15\'), healDamage(30)\">\r\n  Find a bush to hide in \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
+new SceneConstructor('ryanwoods10', 'You walk as fast as you can but the fog catches up to you. You hear wings flapping and they start to get louder.. You look up to find a flock of bird flying towards your direction. \"That can\'t be good..\"', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods14\'), battle(hero,ryanMurderOfCrows)\">\r\n  Try to outrun the birds \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods15\'), healDamage(30)\">\r\n  Find a bush to hide in \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
 
-new SceneConstructor('ryanwoods14', 'You run as fast as you can but you\'re unable to out run the birds. They attack you from behind as you do your best to protect your head.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit1\')\">\r\n  RUN! \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
+new SceneConstructor('ryanwoods14', 'You run as fast as you can but you\'re unable to out run the birds. They attack you from behind as you do your best to protect your head. You manage to knock away a few but that\'s not enough.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit1\')\">\r\n  RUN! \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods3.jpg');
 
 
 
-new SceneConstructor('ryanwoods7', 'You continue your journey North. You\'re feeling a bit guilty about leaving the group behind and fails to notice a sign next to the trail. The fog gets thicker around you as you go deeper into the woods. You feel an eerie vibe but it might just be the cold air...', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods11\'), doDamage(50)\">\r\n  Continue\r\n<\/button>\r\n  <\/li>\r\n\<\/ul>', 'img/ryanwoods5.jpg');
+new SceneConstructor('ryanwoods7', 'You continue your journey North. You\'re feeling a bit guilty about leaving the group behind and fails to notice a sign next to the trail. The fog gets thicker around you as you go deeper into the woods. You feel an eerie vibe but it might just be the cold air...', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods11\'), doDamage(10)\">\r\n  Continue\r\n<\/button>\r\n  <\/li>\r\n\<\/ul>', 'img/ryanwoods5.jpg');
 
-new SceneConstructor('ryanwoods11', 'The fog gets heavy as you walk down the path.. \"CAWWWWW\" The loud caw surprises you and you look up. You can\'t see any birds but just from the amount of flapping, you can tell there\'s around 50 of them. You go into a full sprint down the hill. Flapping gets louder behind you as you run. You trip on a rock while running and hit your head on a tree. You\'re a bit dazed and there\'s no way you can out run the birds...', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods15\'), healDamage(30)\">\r\n  Hide in a bush \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods14\'), doDamage(30)\">\r\n  Keep Running \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods5.jpg');
+new SceneConstructor('ryanwoods11', 'The fog gets heavy as you walk down the path.. \"CAWWWWW\" The loud caw surprises you and you look up. You can\'t see any birds but just from the amount of flapping, you can tell there\'s around 50 of them. You go into a full sprint down the hill. Flapping gets louder behind you as you run. You trip on a rock while running and hit your head(damage 10) on a tree. You\'re a bit dazed and there\'s no way you can out run the birds...', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoods15\'), healDamage(30)\">\r\n  Hide in a bush \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanwoods14\'), battle(hero,ryanMurderOfCrows)\">\r\n  Keep Running \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods5.jpg');
 
 new SceneConstructor('ryanwoods15', 'You find a nearby bush to hide. You hear the flapping and cawing in the skies and they seem to have flown past you. You sigh with relif. You wait in the bush until they are all gone. You eat some berries in the bush while you wait. You feel nourished.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit1\')\">\r\n Run out of the woods! \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods5.jpg');
 
@@ -113,9 +113,9 @@ new SceneConstructor('ryanwoods15', 'You find a nearby bush to hide. You hear th
 
 new SceneConstructor('ryanwoodsexit1', 'You run until you can\'t feel your legs anymore. You seem to have put some distance between you and the fog. You sigh with relief. You walk along the path and notice a white building to your left..', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit2\')\">\r\n  Keep walking \r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanchurch1\')\">\r\n  Take shelter in the white building \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoodsexit1.jpg');
 
-new SceneConstructor('ryanchurch1', 'ryanchurch1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit2\')\">\r\n  ryanwoodsexit2\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanchurch1.jpg');
+new SceneConstructor('ryanchurch1', 'You approach the white building and realize it\'s a church. The door makes a loud creak as you open the door. There\'s dust everywhere and it looks like no one has entered this building for ages.. You notice a glimpse of something shining in the center of the podium. You start to hear crows outside again.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanwoodsexit2\') giveItem(\'Shield\')\">\r\n  Approach the podium\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n  <button onclick=\"renderPage(\'ryanfog1\')\">\r\n  Run away \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanchurch1.jpg');
 
-new SceneConstructor('ryanwoodsexit2', 'ryanwoodsexit2', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanfog1\')\">\r\n  ryanfog1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoodsexit1.jpg');
+new SceneConstructor('ryanwoodsexit2', '', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanfog1\')\">\r\n  ryanfog1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoodsexit1.jpg');
 
 new SceneConstructor('ryanfog1', 'ryanfog1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanvillagepath1\')\">\r\n  ryanvillagepath1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanfog1.jpg');
 
@@ -473,10 +473,26 @@ var dragon = {
   attackPower: 20,
 };
 
+
 var leeJungleCat = {
   hitPoints: 50,
   attackPower: 5,
 };
+
+var ryanSingleCrow = {
+  hitPoints: 15,
+  attackPower: 2,
+}
+
+var ryanMurderOfCrows = {
+  hitPoints: 45,
+  attackPower: 7,
+}
+
+var ryanLeopard = {
+  hitPoints: 65,
+  attackPower: 8,
+}
 
 
 function saveHero() {
