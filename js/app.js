@@ -316,6 +316,9 @@ new SceneConstructor ('aaron1', 'THis will bew the body of the story for my scen
 
 function resetHero() {
   hero.name = prompt('What is the new heroes name?');
+  // show player name on display
+  var displayName = document.getElementById('charName-id');
+  displayName.innerHTML = hero.name;
   hero.hitPoints = 100;
   hero.armorHP = 0;
   hero.items = [];
@@ -429,10 +432,6 @@ class ArmorBar {
 const AB = new ArmorBar(document.querySelector('.armor-bar'), hero.armorHP);// turns the new instance into a constant with an initial value of 0.
 AB.setValue(hero.armorHP); // will create a new health bar instance and pass hero.hp i.e. objects current hitpoint value.
 
-// show character name on display
-var displayName = document.getElementById('charName-id');
-displayName.textContent = hero.name;
-
 /////////////////////////// DAMAGE CONTROL FUNCTIONS ///////////////////////////
 
 function doDamage(damage) {
@@ -507,13 +506,13 @@ var shieldOBJ = new ItemOBJ('Shield', 'img-item-shield');
 var swordOBJ = new ItemOBJ('Sword', 'img-item-sword');
 var toolsOBJ = new ItemOBJ('Tools', 'img-item-tools');
 var woodOBJ = new ItemOBJ('Wood', 'img-item-wood');
-var potionOBJ = new ItemOBJ('Health Potoin', 'img-item-potion');
+var potionOBJ = new ItemOBJ('Health Potion', 'img-item-potion');
 
 
 ///////////////////////////////// ITEM FUNCTIONS /////////////////////////////////
 /*
 this function I am leaving in for testing purposes, but so far I haven't found a reason to actually use this function
-
+*/
 function checkItem(itemOBJ) {
   for(var i = 0; i < hero.items.length; i++) {
     console.log('What is this?: ', i, hero.items[i].name);
@@ -522,7 +521,7 @@ function checkItem(itemOBJ) {
     }
   }
 }
-*/
+
 function giveItem(OBJ) {
   var itemOBJid = OBJ.id;
   hero.items.push(OBJ);
@@ -549,24 +548,30 @@ potionSlot.addEventListener('click', handlePotionClick);
 hevArmorSlot.addEventListener('click', handleHevArmorClick);
 medArmorSlot.addEventListener('click', handleMedArmorClick);
 
-function handlePotionClick (event) {
-  // check for potion in hero.items
-  if (hero.items === potionOBJ.name); {
-    healDamage(25);
+function handlePotionClick() {
+  for(var i = 0; i < hero.items.length; i++) {
+    if (hero.items[i].name === potionOBJ.name) {
+      healDamage(25);
+      loseItem(potionOBJ);
+    }
   }
 }
 
-function handleHevArmorClick (event) {
-  // check hero.armorHP and hero.items to see if itemHevArmor is available and if it needs to be used.
-  if((hero.armorHP < 100) && (hero.items === hevArmorOBJ.name)) {
-    AB.setValue(100);
+function handleHevArmorClick() {
+  for(var i = 0; i < hero.items.length; i++) {
+    if (hero.items[i].name === hevArmorOBJ.name) {
+      AB.setValue(100);
+      loseItem(hevArmorOBJ);
+    }
   }
 }
 
-function handleMedArmorClick (event) {
-  // check to see if hero.armorHP is less than 75 and if hero.items has itemMedArmor present
-  if((hero.armorHP < 75) && (hero.items === medArmorOBJ.name)) {
-    AB.setValue(75);
+function handleMedArmorClick() {
+  for(var i = 0; i < hero.items.length; i++) {
+    if (hero.items[i].name === medArmorOBJ.name) {
+      AB.setValue(75);
+      loseItem(medArmorOBJ);
+    }
   }
 }
 
