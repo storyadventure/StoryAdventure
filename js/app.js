@@ -512,14 +512,16 @@ var potionOBJ = new ItemOBJ('Health Potoin', 'img-item-potion');
 
 ///////////////////////////////// ITEM FUNCTIONS /////////////////////////////////
 
-function giveItem(itemOBJname, itemOBJid) {
+function giveItem(OBJ) {
+  var itemOBJname = OBJ.name;
+  var itemOBJid = OBJ.id;
   if(hero.items !== itemOBJname) {
     hero.items.push(itemOBJname);
     document.getElementById(itemOBJid).setAttribute('style', 'opacity:1');
   } else {alert(`${hero.characterName} you already have ${itemOBJname} in your inventory.`);
   }
 };
-// example call giveItem(axeOBJ.name, axeOBJ.id);
+// example call giveItem(axeOBJ);
 
 function loseItem(itemOBJname, itemOBJid) {
   if(hero.items === itemOBJname) {
