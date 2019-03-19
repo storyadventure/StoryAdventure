@@ -291,9 +291,10 @@ function giveItem(itemName) {
 
 
 function battle(hero, enemy) {
-  while ((enemy.hitPoints > 0) && (hero.hitPoints > 0)) {
+  var enemyBattleHp = enemy.hitPoints;
+  while ((enemyBattleHp > 0) && (hero.hitPoints > 0)) {
     doDamage(enemy.attackPower);
-    enemy.hitPoints = enemy.hitPoints - hero.attackPower;
+    enemyBattleHp = enemyBattleHp - hero.attackPower;
   }
 
 }
