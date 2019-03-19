@@ -4,7 +4,6 @@ var book = [];
 var hero = {};
 
 
-
 // This constructor should be a good starting point for 'scenes' within this story
 // Next add for the constructor is for a background image
 function SceneConstructor(sceneNumber, text, html, background) {
@@ -38,12 +37,9 @@ new SceneConstructor('lee8', 'You have answered the fairys riddle correctly!\r\n
 new SceneConstructor('lee9', 'A coursing waterfall! As you leave the last identifiable part of the woods you see a large river spilling over the edge of a sheer cliff face. The sound is almost deafening and you are totally absorbed in the experience of seeing this mighty body of water rushing past you, over the edge of this ridgeline and then crashing into the mist below. \r\n\r\nYou have no idea how you will get down, but there is no other way since this ridge extends as far as you can see in either direction. If you had a boat you can at least try to ride down the waterfall but without a boat you will be jumping and hoping for the best.', '<ul>\r\n<li><button onclick=\"renderPage(\'lee10\'), doDamage(100)\">Jump for it!<\/button><\/li>\r\n<li><button onclick=\"renderPage(\'lee10\'), doDamage(50)\">Ride your boat down<\/button><\/li>\r\n<\/ul>', 'img/waterfallbg.jpg');
 
 
-new SceneConstructor('start1', 'Choose Your Own Adventure', '<ul><li><img onclick=\"renderPage(\'aaron1\')\" src=\'img\/warrior.jpg\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'lee1\')\" src=\'img\/archer.jpg\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'ludwinmain\')\" src=\'img\/mage.jpg\' class=\'paths\'><\/img>\r\n</li> <li><img onclick=\"renderPage(\'ryan1\')\" src=\'img\/rogue.jpg\' class=\'paths\'><\/img></li></ul>', 'img/startingscreen.jpg');
+new SceneConstructor('start1', 'Choose Your Own Adventure', '<ul><li><img onclick=\"renderPage(\'aaron1\')\" src=\'img\/character_warrior.png\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'lee1\')\" src=\'img\/character_archer.png\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'ludwinmain\')\" src=\'img\/character_mage.png\' class=\'paths\'><\/img>\r\n</li> <li><img onclick=\"renderPage(\'ryan1\')\" src=\'img\/character_rogue.png\' class=\'paths\'><\/img></li></ul>', 'img/startingscreen.jpg');
 
 new SceneConstructor('graveyard', 'You\'re dead.. Sorry! Not sorry!', '<button id = "buttongraveyard" onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/graveyard.jpg');
-
-new SceneConstructor('aaron1', 'Aaron\'s SAMPLE page', '<button onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
-
 
 new SceneConstructor('ludwin1', 'Ludwin\'s SAMPLE page', '<button onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
 new SceneConstructor('ryan1', 'Ryan\'s SAMPLE page', '<button onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
@@ -59,6 +55,8 @@ new SceneConstructor ('ludwinscene2','Hello world','<ul> <li><button>clicksa1</b
 new SceneConstructor ('ludwinscene3','Hello world','<ul> <li><button>clicksb1</button></li> <li><button> clicksb2 </button></li> <li><button> clicksb3 </button></li> <li><button> clicksb4 </button></li> </ul>','img/sunset.jpg' );
 
 new SceneConstructor ('ludwinscene4','Hello world','<ul> <li><button>clicksb1</button></li> <li><button> clicksb2 </button></li> <li><button> clicksb3 </button></li> <li><button> clicksb4 </button></li> </ul>','img/sunset.jpg' );
+
+new SceneConstructor ('aaron1', 'THis will bew the body of the story for my scene\. Choose your destiny', '<ul>\r\n  <li><button onclick=\"renderPage(\'start1\')\">Click Here<\/button><\/li>\r\n<\/ul>' , 'img/sunset.jpg');
 
 
 // Uncomment the next line to see every scene in the book that is available to reference
@@ -133,7 +131,7 @@ class HealthBar {
   }
 
   update() {
-    var percentage = this.value + '%';
+    let percentage = this.value + '%';
     this.fillEl.style.width = percentage;
     this.valueEl.textContent = percentage;
 
@@ -141,7 +139,7 @@ class HealthBar {
 }
 // HB stands for Health Bar
 const HB = new HealthBar(document.querySelector('.health-bar'), hero.hitPoints);// turns the new instance into a constant with an initial value of 100.
-HB.setValue(hero.hitPoints); // will create a new health bar instance and pass hero.hp i.e. objects current hitpoint value.
+HB.setValue(hero.hitPoints); // will create a new health bar instance and pass hero.hitPoints i.e. objects current hitpoint value.
 
 
 class ArmorBar {
@@ -167,7 +165,7 @@ class ArmorBar {
   }
 
   update() {
-    var percentage = this.value + '%';
+    let percentage = this.value + '%';
     this.fillEl.style.width = percentage;
     this.valueEl.textContent = percentage;
 
@@ -175,6 +173,10 @@ class ArmorBar {
 }
 const AB = new ArmorBar(document.querySelector('.armor-bar'), hero.armorHP);// turns the new instance into a constant with an initial value of 0.
 AB.setValue(hero.armorHP); // will create a new health bar instance and pass hero.hp i.e. objects current hitpoint value.
+
+// show character name on display
+var displayName = document.getElementById('charName-id');
+displayName.textContent = hero.name;
 
 /////////////////////////// DAMAGE CONTROL FUNCTIONS ///////////////////////////
 
@@ -231,25 +233,81 @@ function gainArmor(damage) {
   }
 }
 
+///////////////////////////////// ITEM CONSTRUCTOR ///////////////////////////////////
 
-///////////////////////////////// ITEMS /////////////////////////////////
+function ItemOBJ (name, id) {
+  this.name = name;
+  this.id = id;
+}
+var axeOBJ = new ItemOBJ('Axe', 'img-item-axe');
+var book1OBJ = new ItemOBJ('Green Book', 'img-item-book1');
+var book2OBJ = new ItemOBJ('Blue Book', 'img-item-book2');
+var catOBJ = new ItemOBJ('Cat', 'img-item-cat');
+var warriorCatOBJ = new ItemOBJ('Warrior Cat', 'img-item-warrior-cat');
+var flashlightOBJ = new ItemOBJ('Flashlight', 'img-item-flashlight');
+var hevArmorOBJ = new ItemOBJ('Heavy Armor', 'img-item-hev-armor');
+var medArmorOBJ = new ItemOBJ('Medium Armor', 'img-item-med-armor');
+var ropeOBJ = new ItemOBJ('Rope', 'img-item-rope');
+var shieldOBJ = new ItemOBJ('Shield', 'img-item-shield');
+var swordOBJ = new ItemOBJ('Sword', 'img-item-sword');
+var toolsOBJ = new ItemOBJ('Tools', 'img-item-tools');
+var woodOBJ = new ItemOBJ('Wood', 'img-item-wood');
+var potionOBJ = new ItemOBJ('Health Potoin', 'img-item-potion');
 
-var itemAxe = 'Axe';
-var itemBook = 'Book';
-var itemCat = 'Cat';
-var itemHevArmor = 'Heavy Armor';
-var itemMedArmor = 'Medium Armor';
-var itemShield = 'Shield';
-var itemSword = 'Sword';
-var itemTools = 'Tools';
-var itemWood = 'Wood';
-var itemPotion = 'Heal Hit Points';
 
-function giveItem(itemName) {
-  hero.items.push(itemName);
-  document.getElementById('img-item-potion').setAttribute('style', 'opacity:1');
+///////////////////////////////// ITEM FUNCTIONS /////////////////////////////////
+
+function giveItem(itemOBJname, itemOBJid) {
+  if(hero.items !== itemOBJname) {
+    hero.items.push(itemOBJname);
+    document.getElementById(itemOBJid).setAttribute('style', 'opacity:1');
+  } else {alert(`${hero.characterName} you already have ${itemOBJname} in your inventory.`);
+  }
 };
+// example call giveItem(axeOBJ.name, axeOBJ.id);
 
+function loseItem(itemOBJname, itemOBJid) {
+  if(hero.items === itemOBJname) {
+    // delete hero.items[dynamicIndexOfItem]; ?? the hero.item index will be hard to reference if it's always changing
+    document.getElementById(itemOBJid).setAttribute('style', 'opacity:0.3');
+  }
+}
+
+function useItem(itemOBJname, itemOBJid) {
+  return loseItem(itemOBJname, itemOBJid);
+}
+
+///////////////////// ITEM EVENT LISTENER AND CLICK FUNCTIONS /////////////////////
+
+var potionSlot = document.getElementById('img-item-potion');
+var hevArmorSlot = document.getElementById('img-item-hev-armor');
+var medArmorSlot = document.getElementById('img-item-med-armor');
+potionSlot.addEventListener('click', handlePotionClick);
+hevArmorSlot.addEventListener('click', handleHevArmorClick);
+medArmorSlot.addEventListener('click', handleMedArmorClick);
+
+function handlePotionClick (event) {
+  // check for potion in hero.items
+  if (hero.items === potionOBJ.name); {
+    healDamage(25);
+  }
+}
+
+function handleHevArmorClick (event) {
+  // check hero.armorHP and hero.items to see if itemHevArmor is available and if it needs to be used.
+  if((hero.armorHP < 100) && (hero.items === hevArmorOBJ.name)) {
+    AB.setValue(100);
+  }
+}
+
+function handleMedArmorClick (event) {
+  // check to see if hero.armorHP is less than 75 and if hero.items has itemMedArmor present
+  if((hero.armorHP < 75) && (hero.items === medArmorOBJ.name)) {
+    AB.setValue(75);
+  }
+}
+
+///////////////////////////// ENEMY BATTLE FUNCTIONS /////////////////////////////
 
 function battle(hero, enemy) {
   while ((enemy.hitPoints > 0) && (hero.hitPoints > 0)) {
@@ -269,6 +327,7 @@ var leeJungleCat = {
   attackPower: 5,
 };
 
+//////////////////////////////// LOCAL STORAGE ////////////////////////////////
 
 function saveHero() {
   localStorage.hero = JSON.stringify(hero);
