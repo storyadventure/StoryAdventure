@@ -36,6 +36,20 @@ body {
     z-index: 2 ;
 
 }
+.lee1button{
+    font-size: 12px;
+}
+#divId #lee1list{
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 500px;
+}
+#divId #lee1list li{
+    
+    display: inline-block;
+    margin:5px;
+  
+}
 /* #divId #textconstructor{
     color: white;
     margin-left: 380px;
@@ -70,7 +84,7 @@ body {
     width: 584px;
     margin-top: 50px;
 
-    margin-left: 255px; 
+    margin-left: 205px; 
 
 }
 #divId #button1 {
