@@ -18,3 +18,8 @@ Read me for the Story Adventure!
 - added armorHP to the hero object
 - added armor bar to footer HUD
 - added armor bar styleing classes to style.css
+
+
+
+
+
