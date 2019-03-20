@@ -3,7 +3,6 @@ var bodyMain = document.getElementById('bodymain');
 var book = [];
 var hero = {};
 
-
 // This constructor should be a good starting point for 'scenes' within this story
 // Next add for the constructor is for a background image
 function SceneConstructor(sceneNumber, text, html, background) {
@@ -353,10 +352,18 @@ function renderPage(sceneToRender) {
         backgroundImage.src = `${book[i].background}`;
         backgroundImage.id = 'backgroundimage';
         bodyMain.appendChild(backgroundImage);
+        var pageScroll = document.getElementById('scroll')
+        var sceneText1 = document.createElement('li');
+        sceneText1.innerHTML = book[i].sceneNumber;
+        pageScroll.appendChild(sceneText1);
       }
     }
   }
 }
+
+
+
+
 
 /////////////////////////////// HUD CONSTRUCTOR ///////////////////////////////
 
@@ -446,6 +453,10 @@ function doDamage(damage) {
   if (hero.hitPoints < 0) {
     hero.hitPoints = 0;
   }
+  var damageScroll = document.getElementById('scroll')
+  var sceneDamage1 = document.createElement('li');
+  sceneDamage1.innerHTML = 'enemy does ' + damage + ' damage';
+  damageScroll.appendChild(sceneDamage1);
 }
 
 function loseArmor(damage) {
@@ -565,12 +576,18 @@ function handleMedArmorClick (event) {
 }
 
 ///////////////////////////// ENEMY BATTLE FUNCTIONS /////////////////////////////
-
+// function doEnemyDamage(integer) {
+//   hero.attackpower
+// }
 function battle(hero, enemy) {
   var enemyBattleHp = enemy.hitPoints;
   while ((enemyBattleHp > 0) && (hero.hitPoints > 0)) {
     doDamage(enemy.attackPower);
     enemyBattleHp = enemyBattleHp - hero.attackPower;
+    var heroDamageScroll = document.getElementById('scroll')
+    var sceneDamage2 = document.createElement('li');
+    sceneDamage2.innerHTML = 'hero does ' + hero.attack + ' damage';
+    heroDamageScroll.appendChild(sceneDamage2);
   }
 
 }
@@ -637,3 +654,13 @@ else {
   resetHero();
 };
 
+// function scrollText() {
+//   for (var i = 0; i < hero.scenesVisited.length; i++) {
+//     var pageScroll = document.getElementById('scroll')
+//     var sceneText1 = document.createElement('li');
+//     sceneText1.textcontent = hero.scenesVisited[i];
+//     pageScroll.appendChild(sceneText1);
+//   }
+// }
+
+// scrollText();
