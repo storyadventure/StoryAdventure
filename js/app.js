@@ -697,3 +697,14 @@ else {
 // }
 
 // scrollText();
+var pain1 = new Audio('sounds/FX_pain1.mp3')
+var pain2 = new Audio('sounds/FX_pain2.mp3')
+var pain3 = new Audio('sounds/FX_pain3.mp3')
+var pain4 = new Audio('sounds/FX_pain4.mp3')
+var death = new Audio('sounds/FX_death.mp3')
+var heartbeatsound = new Audio('sounds/FX_heartbeat_breath.mp3')
+var swordfightsound = new Audio('sounds/FX_swordfight.mp3')
+
+function play(sound){
+  sound.play();
+};
