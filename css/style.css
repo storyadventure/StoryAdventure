@@ -1,3 +1,14 @@
+
+
+#scroll {
+    position: absolute;
+    overflow-x: hidden;
+    height: 200px;
+    width: 250px;
+    left: 20px;
+    bottom: 100px;
+}
+
 #googlepic {
     width: 200px;
     position: absolute;
@@ -143,11 +154,12 @@ div #leedeadbutton{
     margin:5px;
   
 }
-/* #divId #textconstructor{
+#divId #textconstructor{
     color: white;
     margin-left: 380px;
     margin-top: -200px;
-} */
+}
+
 #buttontree1{
     margin-left:800px;
     margin-top: 190px;
