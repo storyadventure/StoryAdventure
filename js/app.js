@@ -235,10 +235,10 @@ function gainCat() {
   hero.attackPower += 20;
   alert('The cat will join you as an ally');
 }
-function gainMediumArmor() {
-  giveItem('mediumarmor');
-  gainArmor(50);
-};
+// function gainMediumArmor() {
+//   giveItem(hevArmorOBJ);
+//   gainArmor(50);
+// };
 
 function checkIfDead(scene) {
   if (hero.hitPoints <= 0) {
@@ -253,7 +253,7 @@ function checkIfDead(scene) {
 new SceneConstructor('lee1', 'You walk deep into the jungle. The surroundings are dark and teeming with life. As you look around you see the glint of some large animals eyes.  A large jungle cat slinks into view. You see the glint of gold from a necklace the big cat is wearing. It locks eyes with you and begins to slowly walk away. What do you do?', '<ul id = "lee1button">\r\n<li><button onclick=\"renderPage(\'lee2\')\">Follow the leopard deeper into the jungle\r\n<\/button><\/li>\r\n<li><button onclick=\"renderPage(\'lee3b\'), doDamage(35)\">\r\n Attack the leopard and try to take the necklace from its cold lifeless body\r\n<\/button><\/li>\r\n<li><button onclick=\"renderPage(\'lee4\')\">\r\n  Search the area for clues\r\n<\/button><\/li>\r\n<\/ul>', 'img/forestbg.jpg');
 
 //centered buttons
-new SceneConstructor('lee2', 'The big cat continues to walk ahead of you. Occassionally it glances back at you as if to make sure that you are following it. The forest eventually opens into a wide clearing, the sun is breaking through the dark clouds which have followed you from your homelands to this blighted land. You get closer and closer to the big cat until you can hear its soft breathing. It\'s continuing to hold eye contact with you until suddenly the jungle predator tenses and seems about to attack! What do you do?!', '<ul id = "lee2button">\r\n<li><button onclick=\"renderPage(\'lee3a\'), doDamage(35)\">Quickly attack before the animal has a chance to prepare\r\n<\/button><\/li>\r\n\r\n<li><button onclick=\"renderPage(\'lee5\'), gainCat()\">Wait a moment to see what this dangerous adversary does\r\n<\/button><\/li>\r\n<\/ul>', 'img/forestbg.jpg');
+new SceneConstructor('lee2', 'The big cat continues to walk ahead of you. Occassionally it glances back at you as if to make sure that you are following it. The forest eventually opens into a wide clearing, the sun is breaking through the dark clouds which have followed you from your homelands to this blighted land. You get closer and closer to the big cat until you can hear its soft breathing. It\'s continuing to hold eye contact with you until suddenly the jungle predator tenses and seems about to attack! What do you do?!', '<ul id = "lee2button">\r\n<li><button onclick=\"renderPage(\'lee3a\'), doDamage(35)\">Quickly attack before the animal has a chance to prepare\r\n<\/button><\/li>\r\n\r\n<li><button onclick=\"renderPage(\'lee5\'), giveItem(catOBJ), gainCat()\">Wait a moment to see what this dangerous adversary does\r\n<\/button><\/li>\r\n<\/ul>', 'img/forestbg.jpg');
 
 //centered buttons
 new SceneConstructor('lee3a', 'The big cat growls and lunges at you before you can bring any weapon to bear. This apex predator could make short work of you but it isn\'t interested in a fight. It swipes you across the chest drawing blood and a grimace from you. You fall to the ground, quickly you spring back to your feet to prepare for another attack but you only see the briefest shadow of the big cat disappearing back into the forest.', '<ul id = "lee3abutton"> <li><button onclick=\"renderPage(\'lee5\')\"> Collect yourself mentally and continue on your journey into the clearning.\r\n<\/button>\r\n<\/li><\/ul>', 'img/forestbg.jpg');
@@ -266,7 +266,7 @@ new SceneConstructor('lee4', 'You look around the area and don\'t see anything o
 //centered buttons
 new SceneConstructor('lee5', 'You and your allies square up against what looks like an enormous human man. He is in everyway a scaled up version of a normal human. You are struck by a strange thought in the moments before the fight and you wonder if a small animal has ever taken refuge inside of this giants nostril. You are so distracted by this thought that you almost forget to be afraid. ', '<ul id = "lee5button"> <li><button onclick=\"battle(hero, leeGiant), renderPage(\'lee5a\')\ "> Find out if you survive the fight!\r\n<\/button>\r\n<\/li><\/ul>\r\n', 'img/forestbg.jpg');
 //centered buttons
-new SceneConstructor('lee5a', 'You loot the giants corpse and find a set of armor which will help you on your journey.', '<ul id = "lee5abutton"> <li><button onclick=\"gainMediumArmor(),renderPage(\'lee9\')\"> Don the armor and continue towards the sound of rushing water.\r\n<\/button>\r\n<\/li><\/ul>', 'img/forestbg.jpg');
+new SceneConstructor('lee5a', 'You loot the giants corpse and find a set of armor which will help you on your journey.', '<ul id = "lee5abutton"> <li><button onclick=\"giveItem(hevArmorOBJ),renderPage(\'lee9\')\"> Don the armor and continue towards the sound of rushing water.\r\n<\/button>\r\n<\/li><\/ul>', 'img/forestbg.jpg');
 //centered buttons
 new SceneConstructor('lee6', 'You have chosen to fight a wild animal! You are a crazy person but you lunge back and forth with this mighty beast. The game of life and death has begun! As you battle back and forth you feel impending terror! You aren\'t sure if you will beat this animal.', '<ul id = "lee6button"><li><button onclick=\"renderPage(\'lee3c\'), battle(hero,leeJungleCat)\">See if you survive!<\/button><\/li><\/ul>', 'img/forestbg.jpg');
 //centered buttons
@@ -581,7 +581,7 @@ function handlePotionClick() {
 function handleHevArmorClick() {
   for(var i = 0; i < hero.items.length; i++) {
     if (hero.items[i].name === hevArmorOBJ.name) {
-      AB.setValue(100);
+      gainArmor(100);
       loseItem(hevArmorOBJ);
     }
   }
@@ -590,7 +590,7 @@ function handleHevArmorClick() {
 function handleMedArmorClick() {
   for(var i = 0; i < hero.items.length; i++) {
     if (hero.items[i].name === medArmorOBJ.name) {
-      AB.setValue(75);
+      gainArmor(75);
       loseItem(medArmorOBJ);
     }
   }
