@@ -308,7 +308,7 @@ new SceneConstructor ('explore','Hello world','<ul> <li><button>clicksb1</button
 new SceneConstructor ('waititout','Hello world','<ul> <li><button>clicksb1</button></li> <li><button> clicksb2 </button></li> <li><button> clicksb3 </button></li> <li><button> clicksb4 </button></li> </ul>','img/sunset.jpg' );
 
 
-new SceneConstructor ('aaron1', 'THis will bew the body of the story for my scene\. Choose your destiny', '<ul>\r\n  <li><button onclick=\"renderPage(\'start1\')\">Click Here<\/button><\/li>\r\n<\/ul>' , 'img/sunset.jpg');
+new SceneConstructor ('aaron1', 'One day while on a journey, you stopped at a river to get a drink of water.  A wizard approaches you and asks for a favor:', '<ul>\r\n  <li><button onclick=\"renderPage(\'start1\');\">Sorry, I\'m busy.<\/button><\/li><li><button onclick=\"renderPage(\'aaronQ1a\');\">My time isn\'t free.<\/button><\/li><li><button onclick=\"renderPage(\'aaronQ1b\');\">Always willing to help the elderly.<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_river.jpeg');
 
 
 // Uncomment the next line to see every scene in the book that is available to reference
