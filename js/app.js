@@ -2,6 +2,7 @@
 var bodyMain = document.getElementById('bodymain');
 var book = [];
 var hero = {};
+var allScroll = document.getElementById('scroll');
 
 // This constructor should be a good starting point for 'scenes' within this story
 // Next add for the constructor is for a background image
@@ -323,6 +324,9 @@ function resetHero() {
   HB.setValue(100);
   AB.setValue(0);
   renderPage('start1');
+  while (allScroll.firstChild) {
+    allScroll.removeChild(allScroll.firstChild);
+  }
 }
 
 // this is the secret sauce, that makes the scene objects render
@@ -360,8 +364,6 @@ function renderPage(sceneToRender) {
     }
   }
 }
-
-
 
 
 
@@ -576,9 +578,8 @@ function handleMedArmorClick (event) {
 }
 
 ///////////////////////////// ENEMY BATTLE FUNCTIONS /////////////////////////////
-// function doEnemyDamage(integer) {
-//   hero.attackpower
-// }
+
+
 function battle(hero, enemy) {
   var enemyBattleHp = enemy.hitPoints;
   while ((enemyBattleHp > 0) && (hero.hitPoints > 0)) {
@@ -586,7 +587,7 @@ function battle(hero, enemy) {
     enemyBattleHp = enemyBattleHp - hero.attackPower;
     var heroDamageScroll = document.getElementById('scroll')
     var sceneDamage2 = document.createElement('li');
-    sceneDamage2.innerHTML = 'hero does ' + hero.attack + ' damage';
+    sceneDamage2.innerHTML = 'hero does ' + hero.attackPower + ' damage';
     heroDamageScroll.appendChild(sceneDamage2);
   }
 
