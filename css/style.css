@@ -1,12 +1,14 @@
-
+html {
+    zoom: 90%;
+}
 
 #scroll {
     position: absolute;
     overflow-x: hidden;
     height: 200px;
     width: 250px;
-    left: 20px;
-    bottom: 100px;
+    left: 100px;
+    top: 20%;
 }
 
 #googlepic {
@@ -383,7 +385,7 @@ h6 {
 
 #resetbutton{
     position: absolute;
-    margin-left: 90px;
+    margin-left: 10px;
     margin-top: 10px;
 }
 button {
