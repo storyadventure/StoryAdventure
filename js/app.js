@@ -286,7 +286,7 @@ new SceneConstructor('Knock knock knock', 'You knock piteously upon the cottage 
 
 
 
-new SceneConstructor('start1', 'Choose Your Own Adventure', '<ul id = "mainbuttons"><li><img onclick=\"renderPage(\'aaron1\')\" src=\'img\/character_warrior.png\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'You enter a forest\')\" src=\'img\/character_archer.png\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'ludwinmain\')\" src=\'img\/character_mage.png\' class=\'paths\'><\/img>\r\n</li> <li><img onclick=\"renderPage(\'ryan1\')\" src=\'img\/character_rogue.png\' class=\'paths\'><\/img></li></ul>', 'img/startingscreen.jpg');
+new SceneConstructor('start1', 'Choose Your Own Adventure', '<ul id = "mainbuttons"><li><img onclick=\"renderPage(\'A Drink of Water\')\" src=\'img\/character_warrior.png\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'You enter a forest\')\" src=\'img\/character_archer.png\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'ludwinmain\')\" src=\'img\/character_mage.png\' class=\'paths\'><\/img>\r\n</li> <li><img onclick=\"renderPage(\'ryan1\')\" src=\'img\/character_rogue.png\' class=\'paths\'><\/img></li></ul>', 'img/startingscreen.jpg');
 
 //centered buttons
 new SceneConstructor('You step inside the cottage', 'The healer anoints you with herbs and tinictures, your sore body starting to feel first like truly hammered shit. Eventually as time goes by you reach the level of lightly hammered shit and the healer tells you that it is time for you to go back out into the world. You gather your things and leave the cottage.', '<ul id ="lee12abutton"> <li><button onclick=\"renderPage(\'You leave the cottage, hopefully for something better\'), healDamage(80)\"> Venture forth\r\n<\/button>\r\n<\/li>  \r\n<\/ul>\r\n', 'img/cottagebg.jpg');
@@ -321,19 +321,19 @@ new SceneConstructor('forage','You find some fruits and feel relieved that you d
 
 new SceneConstructor('makeshelter','You have food and shelter and you have been tendind your injuries, but the smell of delicious grill boar has atracted an unwanted visitor. A man attacks you. He wants your food and your knife. You are afraid but you need your knife and help to get out of the island. You can fight him or you can try to negotiate with him to gain an ally.','<ul> <li><button onclick = " renderPage(\'fight\')">Fight.</button></li> <li><button>Negotiate.</button></li> </ul>','img/islandman.jpg')
 
-new SceneConstructor('backwithoutboar','You are getting weaker and the injuries are getting worse you are about to lose conciusness. You see a siluette in the distance. It is a person and you need help, maybe he can help you.','<ul> <li><button onclick = "renderPage(\'cryforhelp\')">Cry for help.</button></li> <li><button onclick = "renderPage(\'hide\')">Hide.</button></li> </ul>','img/sunset.jpg');
+new SceneConstructor('backwithoutboar','You are getting weaker and the injuries are getting worse you are about to lose conciusness. You see a siluette in the distance. It is a person and you need help, maybe he can help you.','<ul> <li><button onclick = "renderPage(\'cryforhelp\')">Cry for help.</button></li> <li><button onclick = "renderPage(\'hide\')">Hide.</button></li> </ul>','img/islandman.jpg');
 
-new SceneConstructor('headbackshore','Back on the shore you wonder what was that noise? Is it posible that there is people in the island? You fall sleep. The light of the sun wakes you up and find the boar that you tried to hunt next to you and is eating the food you gathered. You chase it and stumble upon a cave. You explore and find a chest with tools on it.','<ul> <li><button onclick = "renderPage(\'toolbox\')"> Fix your plane. </button></li> </ul>','img/sunset.jpg');
+new SceneConstructor('headbackshore','Back on the shore you wonder what was that noise? Is it posible that there is people in the island? You fall sleep. The light of the sun wakes you up and find the boar that you tried to hunt next to you and is eating the food you gathered. You chase it and stumble upon a cave. You explore and find a chest with tools on it.','<ul> <li><button onclick = "renderPage(\'toolbox\')"> Fix your plane. </button></li> </ul>','img/toolbox.jpg');
 
-new SceneConstructor('hide','You are not thinking clear. He was your only way out of the island. ','<ul> <li><button onclick = "renderPage(\'start1\')">Start again</button></li> </ul>','img/sunset.jpg');
+new SceneConstructor('hide','You are not thinking clear. He was your only way out of the island. ','<ul> <li><button onclick = "renderPage(\'start1\')">Start again</button></li> </ul>','img/enemy.jpg');
 
-new SceneConstructor('toolbox','Now that you have a toolbox you can fix the plane and get out of the island.','<ul> <li><button onclick = "renderPage(\'start1\')"> Start </button></li> </ul>', 'img/sunrise.jpg');
+new SceneConstructor('toolbox','Now that you have a toolbox you can fix the plane and get out of the island.','<ul> <li><button onclick = "renderPage(\'start1\')"> Start </button></li> </ul>', 'img/toolbox.jpg');
 
-new SceneConstructor('cryforhelp','You cried for help and the man has helped you. He carried you to the cabin where you wake up. He is a nice man that has been in the island for a long time. He is actually a mechanic and has agreed to help you to fix your plane. You are able to leave the island.','<ul> <button onclick = "renderPage(\'start1\')"> Start  </button></li> </ul>','img/sunset.jpg');
+new SceneConstructor('cryforhelp','You cried for help and the man has helped you. He carried you to the cabin where you wake up. He is a nice man that has been in the island for a long time. He is actually a mechanic and has agreed to help you to fix your plane. You are able to leave the island.','<ul> <button onclick = "renderPage(\'start1\')"> Start  </button></li> </ul>','img/light.jpg');
 
-new SceneConstructor('fight','You fight him and barely survived it. You have made a strong enemy.','<ul> <li><button> button </button></li> </ul>','img/sunset.jpg');
+new SceneConstructor('fight','You fight him and barely survived it. You have made a strong enemy.','<ul> <li><button> button </button></li> </ul>','img/enemy1.jpg');
 
-new SceneConstructor('negotiate','You talk to the man and he has calmed down. You explain your situation and he is happy to help you. He takes his tool box and goes with you to fix your plane.','<ul> <li><button>button</button></li> </ul>','img/sunset.jpg')
+new SceneConstructor('negotiate','You talk to the man and he has calmed down. You explain your situation and he is happy to help you. He takes his tool box and goes with you to fix your plane.','<ul> <li><button>button</button></li> </ul>','img/sunrise.jpg')
 
 
 
