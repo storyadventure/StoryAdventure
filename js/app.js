@@ -76,7 +76,7 @@ new SceneConstructor('You travel South', 'You hear birds chirping as you travel 
 
 new SceneConstructor('You continue down South..', 'You stumble across the rough trail and hear a faint cawing in the back. You continue on faster hoping to make it out of the woods before dark. You find some berries on the way. You are exhuasted.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'You start hearing crows..\'), healDamage(30)\">\r\n  Eat the berries and continue\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'You start hearing crows..\')\">\r\n  Don\'t eat the berries and continue\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'You are attacked by a murder of crows!\'), battle(hero,ryanMurderOfCrows)\">\r\n  Take a break \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
 
-new SceneConstructor('You start hearing crows..', 'You start to hear cawing in the back. As if it\'s following you.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'You hear screaming.. You start to run!\')\">\r\n  Ignore it and continue\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'Herd of crows attack you!\'), battle(hero,ryanMuderofCrows)\">\r\n  Turn around to investigate\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
+new SceneConstructor('You start hearing crows..', 'You start to hear cawing in the back. As if it\'s following you.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'You hear screaming.. You start to run!\')\">\r\n  Ignore it and continue\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'Herd of crows attack you!\'), battle(hero,ryanMurderofCrows)\">\r\n  Turn around to investigate\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
 
 new SceneConstructor('You hear screaming.. You start to run!', 'You hear a faint screaming in the back and more cawing. You don\'t care to go back and start to run', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'You approach a church building..1\')\">\r\n  RUN! \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoods2.jpg');
 
@@ -233,12 +233,13 @@ new SceneConstructor('ryanvillagepath1', 'ryanvillagepath1', '<ul>\r\n<li>\r\n  
 
 // =======
 // Lee's scenes
-
+/*
 function gainCat() {
   hero.items.push('catlove');
   hero.attackPower += 20;
   alert('The cat will join you as an ally');
 }
+*/
 // function gainMediumArmor() {
 //   giveItem(hevArmorOBJ);
 //   gainArmor(50);
@@ -257,7 +258,7 @@ function checkIfDead(scene) {
 new SceneConstructor('You enter a forest', 'You walk deep into the jungle. The surroundings are dark and teeming with life. As you look around you see the glint of some large animals eyes.  A large jungle cat slinks into view. You see the glint of gold from a necklace the big cat is wearing. It locks eyes with you and begins to slowly walk away. What do you do?', '<ul id = "lee1button">\r\n<li><button onclick=\"renderPage(\'You follow the leopard\')\">Follow the leopard deeper into the jungle\r\n<\/button><\/li>\r\n<li><button onclick=\"renderPage(\'You attack the leopard!\'), doDamage(35)\">\r\n Attack the leopard and try to take the necklace from its cold lifeless body\r\n<\/button><\/li>\r\n<li><button onclick=\"renderPage(\'You decide to search this area\')\">\r\n  Search the area for clues\r\n<\/button><\/li>\r\n<\/ul>', 'img/forestbg.jpg');
 
 //centered buttons
-new SceneConstructor('You follow the leopard', 'The big cat continues to walk ahead of you. Occassionally it glances back at you as if to make sure that you are following it. The forest eventually opens into a wide clearing, the sun is breaking through the dark clouds which have followed you from your homelands to this blighted land. You get closer and closer to the big cat until you can hear its soft breathing. It\'s continuing to hold eye contact with you until suddenly the jungle predator tenses and seems about to attack! What do you do?!', '<ul id = "lee2button">\r\n<li><button onclick=\"renderPage(\'You try to get the drop on the panther\'), doDamage(35)\">Quickly attack before the animal has a chance to prepare\r\n<\/button><\/li>\r\n\r\n<li><button onclick=\"renderPage(\'You befriend a panther\'), giveItem(catOBJ), gainCat()\">Wait a moment to see what this dangerous adversary does\r\n<\/button><\/li>\r\n<\/ul>', 'img/forestbg.jpg');
+new SceneConstructor('You follow the leopard', 'The big cat continues to walk ahead of you. Occassionally it glances back at you as if to make sure that you are following it. The forest eventually opens into a wide clearing, the sun is breaking through the dark clouds which have followed you from your homelands to this blighted land. You get closer and closer to the big cat until you can hear its soft breathing. It\'s continuing to hold eye contact with you until suddenly the jungle predator tenses and seems about to attack! What do you do?!', '<ul id = "lee2button">\r\n<li><button onclick=\"renderPage(\'You try to get the drop on the panther\'), doDamage(35)\">Quickly attack before the animal has a chance to prepare\r\n<\/button><\/li>\r\n\r\n<li><button onclick=\"renderPage(\'You befriend a panther\'), giveItem(catOBJ)\">Wait a moment to see what this dangerous adversary does\r\n<\/button><\/li>\r\n<\/ul>', 'img/forestbg.jpg');
 
 //centered buttons
 new SceneConstructor('You try to get the drop on the panther', 'The big cat growls and lunges at you before you can bring any weapon to bear. This apex predator could make short work of you but it isn\'t interested in a fight. It swipes you across the chest drawing blood and a grimace from you. You fall to the ground, quickly you spring back to your feet to prepare for another attack but you only see the briefest shadow of the big cat disappearing back into the forest.', '<ul id = "lee3abutton"> <li><button onclick=\"renderPage(\'You befriend a panther\')\"> Collect yourself mentally and continue on your journey into the clearning.\r\n<\/button>\r\n<\/li><\/ul>', 'img/forestbg.jpg');
@@ -379,15 +380,55 @@ new SceneConstructor ('Meet The Wizard', 'The Wizard says, \"Thank you for retur
 
 ////////////////////////////////////
 
+///////////////////////////////// ITEM CONSTRUCTOR ///////////////////////////////////
+function ItemOBJ (name, id) {
+  this.name = name;
+  this.id = id;
+}
+var axeOBJ = new ItemOBJ('Axe', 'img-item-axe');
+var book1OBJ = new ItemOBJ('Green Book', 'img-item-book1');
+var book2OBJ = new ItemOBJ('Blue Book', 'img-item-book2');
+var catOBJ = new ItemOBJ('Cat', 'img-item-cat');
+var warriorCatOBJ = new ItemOBJ('Warrior Cat', 'img-item-warrior-cat');
+var flashlightOBJ = new ItemOBJ('Flashlight', 'img-item-flashlight');
+var hevArmorOBJ = new ItemOBJ('Heavy Armor', 'img-item-hev-armor');
+var medArmorOBJ = new ItemOBJ('Medium Armor', 'img-item-med-armor');
+var ropeOBJ = new ItemOBJ('Rope', 'img-item-rope');
+var shieldOBJ = new ItemOBJ('Shield', 'img-item-shield');
+var swordOBJ = new ItemOBJ('Sword', 'img-item-sword');
+var toolsOBJ = new ItemOBJ('Tools', 'img-item-tools');
+var woodOBJ = new ItemOBJ('Wood', 'img-item-wood');
+var potionOBJ = new ItemOBJ('Health Potion', 'img-item-potion');
+
 
 // Uncomment the next line to see every scene in the book that is available to reference
 // console.log(book);
+
+function giveItem(OBJ) {
+  var itemOBJid = OBJ.id;
+  hero.items.push(OBJ);
+  document.getElementById(itemOBJid).setAttribute('style', 'opacity:1');
+}
+// example call giveItem(axeOBJ);
+
+function loseItem(loseOBJ) {
+  for(var i = 0; i < hero.items.length; i++) {
+    if(hero.items[i].name === loseOBJ.name) {
+      hero.items.splice(i, 1);
+    }
+  }
+  console.log('what is this? ', loseOBJ.id);
+  document.getElementById(loseOBJ.id).setAttribute('style', 'opacity:0.3');
+}
 
 function resetHero() {
   hero.name = prompt('What is the new heroes name?');
   // show player name on display
   var displayName = document.getElementById('charName-id');
   displayName.innerHTML = hero.name;
+  while (hero.items.length > 0){
+    loseItem(hero.items[0]);
+  }
   hero.hitPoints = 100;
   hero.armorHP = 0;
   hero.items = [];
@@ -570,7 +611,7 @@ function gainArmor(damage) {
 }
 
 ///////////////////////////////// ITEM CONSTRUCTOR ///////////////////////////////////
-
+/*
 function ItemOBJ (name, id) {
   this.name = name;
   this.id = id;
@@ -589,12 +630,12 @@ var swordOBJ = new ItemOBJ('Sword', 'img-item-sword');
 var toolsOBJ = new ItemOBJ('Tools', 'img-item-tools');
 var woodOBJ = new ItemOBJ('Wood', 'img-item-wood');
 var potionOBJ = new ItemOBJ('Health Potion', 'img-item-potion');
-
+*/
 
 ///////////////////////////////// ITEM FUNCTIONS /////////////////////////////////
 /*
 this function I am leaving in for testing purposes, but so far I haven't found a reason to actually use this function
-*/
+
 function checkItem(itemOBJ) {
   for(var i = 0; i < hero.items.length; i++) {
     console.log('What is this?: ', i, hero.items[i].name);
@@ -603,37 +644,46 @@ function checkItem(itemOBJ) {
     }
   }
 }
-
+*/
+/*
 function giveItem(OBJ) {
   var itemOBJid = OBJ.id;
   hero.items.push(OBJ);
   document.getElementById(itemOBJid).setAttribute('style', 'opacity:1');
 }
 // example call giveItem(axeOBJ);
+*/
 
-function loseItem(loseOBJ) {
-  for(var i = 0; i < hero.items.length; i++) {
-    if(hero.items[i].name === loseOBJ.name) {
-      hero.items.splice(i, 1);
-    }
-  }
-  document.getElementById(loseOBJ.id).setAttribute('style', 'opacity:0.3');
-}
+// function loseItem(loseOBJ) {
+//   for(var i = 0; i < hero.items.length; i++) {
+//     if(hero.items[i].name === loseOBJ.name) {
+//       hero.items.splice(i, 1);
+//     }
+//   }
+//   document.getElementById(loseOBJ.id).setAttribute('style', 'opacity:0.3');
+// }
 // example call loseItem(axeOBJ);
 
 ///////////////////// ITEM EVENT LISTENER AND CLICK FUNCTIONS /////////////////////
 
 var potionSlot = document.getElementById('img-item-potion');
 var hevArmorSlot = document.getElementById('img-item-hev-armor');
+var swordSlot = document.getElementById('img-item-sword');
+var shieldSlot = document.getElementById('img-item-shield');
 var medArmorSlot = document.getElementById('img-item-med-armor');
+var catSlot = document.getElementById('img-item-cat');
 potionSlot.addEventListener('click', handlePotionClick);
 hevArmorSlot.addEventListener('click', handleHevArmorClick);
 medArmorSlot.addEventListener('click', handleMedArmorClick);
+catSlot.addEventListener('click', handleCatClick);
+swordSlot.addEventListener('click', handleSwordClick);
+shieldSlot.addEventListener('click', handleShieldClick);
 
 function handlePotionClick() {
   for(var i = 0; i < hero.items.length; i++) {
     if (hero.items[i].name === potionOBJ.name) {
       healDamage(25);
+      alert('You use the potion and gain 25 health');
       loseItem(potionOBJ);
     }
   }
@@ -643,7 +693,28 @@ function handleHevArmorClick() {
   for(var i = 0; i < hero.items.length; i++) {
     if (hero.items[i].name === hevArmorOBJ.name) {
       gainArmor(100);
+      alert('You use the heavy armor and gain 100 armor');
       loseItem(hevArmorOBJ);
+    }
+  }
+}
+
+function handleSwordClick() {
+  for(var i = 0; i < hero.items.length; i++) {
+    if (hero.items[i].name === swordOBJ.name) {
+      hero.attackPower += 10;
+      alert('You use the sword and gain 10 attack');
+      loseItem(swordOBJ);
+    }
+  }
+}
+
+function handleShieldClick() {
+  for(var i = 0; i < hero.items.length; i++) {
+    if (hero.items[i].name === shieldOBJ.name) {
+      gainArmor(25);
+      alert('You use the shield and gain 25 armor');
+      loseItem(shieldOBJ);
     }
   }
 }
@@ -652,7 +723,18 @@ function handleMedArmorClick() {
   for(var i = 0; i < hero.items.length; i++) {
     if (hero.items[i].name === medArmorOBJ.name) {
       gainArmor(75);
+      alert('You use the medium armor and gain 75 armor');
       loseItem(medArmorOBJ);
+    }
+  }
+}
+
+function handleCatClick() {
+  for(var i = 0; i < hero.items.length; i++) {
+    if (hero.items[i].name === catOBJ.name) {
+      hero.attackPower += 20;
+      alert('The cat will join you as an ally');
+      loseItem(catOBJ);
     }
   }
 }
