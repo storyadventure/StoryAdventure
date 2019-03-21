@@ -15,6 +15,17 @@ function SceneConstructor(sceneNumber, text, html, background) {
 }
 
 
+var pain1 = new Audio('sounds/FX_pain1.mp3');
+var pain2 = new Audio('sounds/FX_pain2.mp3');
+var pain3 = new Audio('sounds/FX_pain3.mp3');
+var pain4 = new Audio('sounds/FX_pain4.mp3');
+var death = new Audio('sounds/FX_death.mp3');
+var heartbeatsound = new Audio('sounds/FX_heartbeat_breath.mp3');
+var swordfightsound = new Audio('sounds/FX_swordfight.mp3');
+
+function play(sound){
+  sound.play();
+};
 
 /*------------------------------------START, DEAD SCENES-----------------------------------------*/
 
@@ -301,7 +312,7 @@ new SceneConstructor('You step inside the cottage', 'The healer anoints you with
 //centered buttons
 new SceneConstructor('lee13', 'You crash in through a window and lock eyes with an old woman who has dangerous magics circling around her. \"INTRUDER!\" She bellows in an other worldly voice \"YOU SHALL REGRET THIS TRESPASS\" The dark old magics carry your battered body out the door and dump you outside. Your body feels even worse than it did before if that is even possible. ', '<ul id = "lee13button"> <li><button onclick=\"renderPage(\'You leave the cottage, hopefully for something better\')\"> Cry in terror\r\n<\/button>\r\n<\/li>  \r\n<\/ul>\r\n', 'img/cottagebg.jpg');
 //centered buttons
-new SceneConstructor('You leave the cottage, hopefully for something better', 'The bright sunlight hurts your eyes after the time you spent in the dark cottage. You step away from the cottage and you see three paths ahead of you. A path down through a valley, a rocky path through the mountains, a dangerous looking swamp.', '<ul id = "lee14button"> <li><button onclick=\"renderPage(\'start1\')\"> Valley\r\n<\/button>\r\n<\/li> \r\n  \r\n  <li><button onclick=\"renderPage(\'start1\')\"> Mountain\r\n<\/button>\r\n<\/li> \r\n  \r\n  <li><button onclick=\"renderPage(\'start1\')\"> Swamp\r\n<\/button>\r\n<\/li> \r\n<\/ul>\r\n', 'img/forkbg.jpg');
+new SceneConstructor('You leave the cottage, hopefully for something better', 'The bright sunlight hurts your eyes after the time you spent in the dark cottage. You step away from the cottage and you see three paths ahead of you. A path down through a valley, a rocky path through the mountains, a dangerous looking swamp.', '<ul id = "lee14button"> <li><button onclick=\"renderPage(\'You wake up in a cave..\')\"> cave \r\n<\/button>\r\n<\/li> \r\n  \r\n  <li><button onclick=\"renderPage(\'You wake up in a cave..\')\"> cave \r\n<\/button>\r\n<\/li> \r\n  \r\n  <li><button onclick=\"renderPage(\'You wake up in a cave..\')\"> cave \r\n<\/button>\r\n<\/li> \r\n<\/ul>\r\n', 'img/forkbg.jpg');
 
 new SceneConstructor('ludwin1', 'Ludwin\'s SAMPLE page', '<button onclick=\"renderPage(\'start1\')\">\r\nStart Over\r\n<\/button>', 'img/slime1.jpg');
 
@@ -746,6 +757,7 @@ function handleCatClick() {
 
 
 function battle(hero, enemy) {
+  play(pain1);
   var enemyBattleHp = enemy.hitPoints;
   while ((enemyBattleHp > 0) && (hero.hitPoints > 0)) {
     doDamage(enemy.attackPower);
@@ -830,14 +842,4 @@ else {
 // }
 
 // scrollText();
-var pain1 = new Audio('sounds/FX_pain1.mp3');
-var pain2 = new Audio('sounds/FX_pain2.mp3');
-var pain3 = new Audio('sounds/FX_pain3.mp3');
-var pain4 = new Audio('sounds/FX_pain4.mp3');
-var death = new Audio('sounds/FX_death.mp3');
-var heartbeatsound = new Audio('sounds/FX_heartbeat_breath.mp3');
-var swordfightsound = new Audio('sounds/FX_swordfight.mp3');
 
-function play(sound){
-  sound.play();
-};
