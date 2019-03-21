@@ -8,7 +8,8 @@ html {
     height: 200px;
     width: 250px;
     left: 100px;
-    top: 10%;
+    top: 20%;
+
 }
 
 #googlepic {
@@ -16,7 +17,7 @@ html {
     position: absolute;
     margin-left: 370px;
     z-index: 2;
-    margin-top:-180px;
+    margin-top:-200px;
 } 
 
 body {
@@ -39,8 +40,8 @@ body {
 }
 #divId ul {
     position: absolute;
-    margin-top: 400px;
-    margin-left: 220px;
+    margin-top: 500px;
+    margin-left: 200px;
 }
 #divId ul li{
     
@@ -382,10 +383,15 @@ h6 {
     width:100px;
     height:150px;
 }
+div #mainbuttons {
+    position: absolute;
+    margin-left: 235px;
+    margin-top: 400px;
+}
 
 #resetbutton{
     position: absolute;
-    margin-left: 10px;
+    margin-left: 90px;
     margin-top: 10px;
 }
 button {
