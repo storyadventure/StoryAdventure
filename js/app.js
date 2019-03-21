@@ -285,7 +285,9 @@ new SceneConstructor('You step towards the cottage', 'You walk closer to the cot
 new SceneConstructor('Knock knock knock', 'You knock piteously upon the cottage door croaking out a pathetic \"Is someone home?\" You hear movement from the inside, a shuffling of cloth, and finally the bolt on the door slides open and you are greeted by a friendly older woman who starts in a cheery voice \"Oh hello there, what brings you to my..... oh you poor thing I can see you\'ve had a rough go of it, did you actually fight the giant? Kids these days, don\'t you know there are easier ways to make it in the world? Come in come in I\'ll get you right as rain in no time.\"\r\n', '<ul id ="lee12button"> <li><button onclick=\"renderPage(\'You step inside the cottage\')\"> Enter the cabin\r\n<\/button>\r\n<\/li>  \r\n<\/ul>', 'img/cottagebg.jpg');
 
 
+
 new SceneConstructor('start1', 'Choose Your Own Adventure', '<ul id = "mainbuttons"><li><img onclick=\"renderPage(\'aaron1\')\" src=\'img\/character_warrior.png\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'You enter a forest\')\" src=\'img\/character_archer.png\' class=\'paths\'></li> <li><img onclick=\"renderPage(\'ludwinmain\')\" src=\'img\/character_mage.png\' class=\'paths\'><\/img>\r\n</li> <li><img onclick=\"renderPage(\'ryan1\')\" src=\'img\/character_rogue.png\' class=\'paths\'><\/img></li></ul>', 'img/startingscreen.jpg');
+
 //centered buttons
 new SceneConstructor('You step inside the cottage', 'The healer anoints you with herbs and tinictures, your sore body starting to feel first like truly hammered shit. Eventually as time goes by you reach the level of lightly hammered shit and the healer tells you that it is time for you to go back out into the world. You gather your things and leave the cottage.', '<ul id ="lee12abutton"> <li><button onclick=\"renderPage(\'You leave the cottage, hopefully for something better\'), healDamage(80)\"> Venture forth\r\n<\/button>\r\n<\/li>  \r\n<\/ul>\r\n', 'img/cottagebg.jpg');
 
@@ -335,9 +337,41 @@ new SceneConstructor('negotiate','You talk to the man and he has calmed down. Yo
 
 
 
+/////////////////////// AARONS SCENES
+
+// Quest: A Drink of Water
+new SceneConstructor ('A Drink of Water', 'One day while on a journey, you stopped at a river to get a drink of water.  A wizard approaches you and asks for a favor:', '<ul>\r\n  <li><button onclick=\"renderPage(\'start1\');\">Sorry, I\'m busy.<\/button><\/li><li><button onclick=\"renderPage(\'Time Is Not Free\');\">My time isn\'t free.<\/button><\/li><li><button onclick=\"renderPage(\'Charity Work\');\">Always willing to help the elderly.<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_river.jpeg');
+
+new SceneConstructor ('Time Is Not Free', 'The Wizard offers a great reward.  In return you must travel to the Frozen Dungeon of Castle Block, and retrieve the Tome of Ancient Tome\s.  Be careful\, there are many spells and traps along the way that guard the sacred dungeon.  The Wizard wishes you luck on your journey.', '<ul>\r\n  <li><button onclick=\"renderPage(\'Proceed To Castle Block\');\">Consider it done.<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_wizard.jpg');
+
+new SceneConstructor ('Charity Work', 'The Wizard starts telling stories of ancient times, back when the sorcerers of the olden times were the new mages on the block.  It didn\'t take long to realize the old guy would not stop rambling on about this ancient book of his, the \"Tome of Ancient Tomes\". You interrupt and suggest that you can help the wizard retrieve the lost book.  The Wizard shows you a map of a Frozen Dungeon named Castle Block.  \"Be careful\,\" the Scorcerer warns\, \"There are many spells and traps along the way that guard the sacred dungeon.\"  The Wizard wishes you luck on your journey.', '<ul>\r\n  <li><button onclick=\"renderPage(\'Proceed To Castle Block\');\">Consider it done.<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_wizard.jpg');
+
+new SceneConstructor ('Proceed To Castle Block', 'As you approach Castle Block, you feel the engery radiate from the massive door at the front of the Frozen Castle.  The hair on the back of your neck stands up as you remember the Wizard\s warning about the obsticals inside the dungeon.', '<ul>\r\n  <li><button onclick=\"renderPage(\'The Inner Dungeon\');\">Enter Castle Block<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_dungeonoutside.jpg');
+
+new SceneConstructor ('The Inner Dungeon', 'The halls are dark and long, they never seem to end.  So far you have managed to avoid the Scorpion Pit, the Bowling-Boulder Ball, and the Breath of Fire.  You decide to rest and notice somthing in the rubble that looks like a backpack.', '<ul>\r\n  <li><button onclick=\"giveItem(ropeOBJ); giveItem(flashlightOBJ); renderPage(\'The Crossing\');\">What\'s this? I think I\'ll have a look.<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_innerdungeon.jpg');
+
+new SceneConstructor ('The Crossing', 'At the end of the dark dangerous corridor you enter an open room that looks like the ruins of a minecraft dungeon...What used to be a bridge is now broken from what seems to be the activation of some hidden trap.  There are pieces of body parts from previous tomb raiders below, oddly in the shape of blocks.  You think to yourself maybe that\'s why they call this Castle Block?  You use the rope you found in the backpack to swing across the trecherous gap.  Once you make it to the other side you notice there is only one way to go.  Danger creeps through your bones.', '<ul>\r\n  <li><button onclick=\"doDamage(35); play(pain2); loseItem(ropeOBJ); renderPage(\'The Spike Pit\');\">Continue Quest<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_dungeon_gap.jpg');
+
+new SceneConstructor ('The Spike Pit', 'You misread the clues and fell into a spike pit.  Luckily you have rope to climb out.  Unfortunately in order to stop the bleeding you had to cut up your rope to make tourniquets for your arms and legs.', '<ul>\r\n  <li><button onclick=\"renderPage(\'The Puzzel Door Riddle One\');\">Continue Quest<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_trap.jpg');
+
+new SceneConstructor ('The Puzzel Door Riddle One', 'Answer the riddles correctly to open the door:  David\'s Father has three sons: Snap, Crackle, and ______.', '<ul>\r\n  <li><button onclick=\"renderPage(\'The Puzzel Door Riddle Two\');\">David<\/button><\/li><li><button onclick=\"doDamage(10); play(pain1);\">Pop<\/button><\/li><li><button onclick=\"doDamage(10); play(pain3);\">Popcorn<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_dungeondoor.jpg');
+
+new SceneConstructor ('The Puzzel Door Riddle Two', 'Well done! The next riddle is: What comes once in a minute, twice in a moment, and never in a thousand years?', '<ul>\r\n  <li><button onclick=\"doDamage(10); play(pain1);\">60 Light Years<\/button><\/li><li><button onclick=\"doDamage(10); play(pain3);\">Millenium<\/button><\/li><li><button onclick=\"renderPage(\'The Puzzel Door Riddle Three\');\">the letter \"m\"<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_dungeondoor.jpg');
+
+new SceneConstructor ('The Puzzel Door Riddle Three', 'Last one: You live in a one story house made \"entierly out of red wood.\"  What color would the stairs be?', '<ul>\r\n  <li><button onclick=\"doDamage(10); play(pain2);\">Red<\/button><\/li><li><button onclick=\"doDamage(10); play(pain1);\">Wood<\/button><\/li><li><button onclick=\"renderPage(\'The Treasure Room\');\">None<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_dungeondoor.jpg');
+
+new SceneConstructor ('The Treasure Room', 'Inside the treasure room you see a treasure chest.  Eventhough you are bleeding and tired, you came all this way to get a stupid book for a \"Great reward\" you may as well keep going.', '<ul>\r\n  <li><button onclick=\"renderPage(\'Open The Treasure\');\">Open The Treasure Chest<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_treasureroom.jpg');
+
+new SceneConstructor ('Open The Treasure', 'As soon as you open the treasure chest, a bright light fills the room.  Trapped inside was the Warrior Angel Goddess: Athena.  You have helped her escape and in return she gives you her magical sword.', '<ul>\r\n  <li><button onclick=\"giveItem(swordOBJ);\">Take Athena\'s Sword<\/button><\/li><li><button onclick=\"giveItem(potionOBJ);\">Take Health Potion<\/button><\/li><li><button onclick=\"giveItem(book2OBJ);\">Take: Tome of Ancient Tomes<\/button><\/li><li><button onclick=\"renderPage(\'Return To The Wizard\');\">Exit Castle Block<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_presentsword.jpg');
+
+new SceneConstructor ('Return To The Wizard', 'The Wizard is pleased you were able to return with the Tome of Ancient Tomes safely.  He offers to reward you for your troubles and says that if you go down to his Alchemy Chamber you can find a health potion on the shelf.', '<ul>\r\n  <li><button onclick=\"renderPage(\'Alchemy Chamber\');\">Go to the Alchemy Chamber<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_questvillage.jpg');
+
+new SceneConstructor ('Alchemy Chamber', 'Grab a health potion from the wall and meet the Wizard upstairs', '<ul>\r\n  <li><button onclick=\"giveItem(potionOBJ);\">Take Health Potion<\/button><\/li><li><button onclick=\"loseItem(book2OBJ); renderPage(\'Meet The Wizard\');\">Meet with the Wizard<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_alchemychamber.jpg');
+
+new SceneConstructor ('Meet The Wizard', 'The Wizard says, \"Thank you for returning my Tome.  Here is a token of my appreciation.\"  The Wizard conjures a brand new set of Heavy Armor and asks if you will accept his gift.', '<ul>\r\n  <li><button onclick=\"giveItem(hevArmorOBJ);\">Take Heavy Armor<\/button><\/li><li><button onclick=\"renderPage(\'start1\');\">Finish Quest<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_wizard.jpg');
 
 
-new SceneConstructor ('aaron1', 'One day while on a journey, you stopped at a river to get a drink of water.  A wizard approaches you and asks for a favor:', '<ul>\r\n  <li><button onclick=\"renderPage(\'start1\');\">Sorry, I\'m busy.<\/button><\/li><li><button onclick=\"renderPage(\'aaronQ1a\');\">My time isn\'t free.<\/button><\/li><li><button onclick=\"renderPage(\'aaronQ1b\');\">Always willing to help the elderly.<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_river.jpeg');
+////////////////////////////////////
 
 
 // Uncomment the next line to see every scene in the book that is available to reference
@@ -705,13 +739,13 @@ else {
 // }
 
 // scrollText();
-var pain1 = new Audio('sounds/FX_pain1.mp3')
-var pain2 = new Audio('sounds/FX_pain2.mp3')
-var pain3 = new Audio('sounds/FX_pain3.mp3')
-var pain4 = new Audio('sounds/FX_pain4.mp3')
-var death = new Audio('sounds/FX_death.mp3')
-var heartbeatsound = new Audio('sounds/FX_heartbeat_breath.mp3')
-var swordfightsound = new Audio('sounds/FX_swordfight.mp3')
+var pain1 = new Audio('sounds/FX_pain1.mp3');
+var pain2 = new Audio('sounds/FX_pain2.mp3');
+var pain3 = new Audio('sounds/FX_pain3.mp3');
+var pain4 = new Audio('sounds/FX_pain4.mp3');
+var death = new Audio('sounds/FX_death.mp3');
+var heartbeatsound = new Audio('sounds/FX_heartbeat_breath.mp3');
+var swordfightsound = new Audio('sounds/FX_swordfight.mp3');
 
 function play(sound){
   sound.play();
