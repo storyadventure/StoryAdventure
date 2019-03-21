@@ -39,7 +39,7 @@ body {
 }
 #divId ul {
     position: absolute;
-    margin-top: 400px;
+    margin-top: 500px;
     margin-left: 220px;
 }
 #divId ul li{
@@ -382,10 +382,15 @@ h6 {
     width:100px;
     height:150px;
 }
+div #mainbuttons {
+    position: absolute;
+    margin-left: 235px;
+    margin-top: 400px;
+}
 
 #resetbutton{
     position: absolute;
-    margin-left: 10px;
+    margin-left: 90px;
     margin-top: 10px;
 }
 button {
