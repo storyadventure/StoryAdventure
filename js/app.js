@@ -393,6 +393,9 @@ function resetHero() {
   while (allScroll.firstChild) {
     allScroll.removeChild(allScroll.firstChild);
   }
+  while (hero.items.length > 0) {
+    loseItem(hero.items[0]);
+  }
 }
 
 // this is the secret sauce, that makes the scene objects render
