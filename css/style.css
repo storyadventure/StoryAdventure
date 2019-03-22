@@ -429,8 +429,8 @@ div #mainbuttons {
 }
 
 #resetbutton{
-    position: absolute;
-    margin-left: 90px;
+    position: fixed;
+    margin-left: 50px;
     margin-top: 10px;
 }
 button {
