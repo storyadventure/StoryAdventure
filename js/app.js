@@ -3,6 +3,7 @@ var bodyMain = document.getElementById('bodymain');
 var book = [];
 var hero = {};
 var allScroll = document.getElementById('scroll');
+hero.items = [];
 
 // This constructor should be a good starting point for 'scenes' within this story
 // Next add for the constructor is for a background image
