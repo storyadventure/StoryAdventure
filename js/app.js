@@ -388,9 +388,9 @@ new SceneConstructor ('Return To The Wizard', 'The Wizard is pleased you were ab
 
 new SceneConstructor ('Alchemy Chamber', 'Grab a health potion from the wall and meet the Wizard upstairs', '<ul>\r\n  <li><button onclick=\"giveItem(potionOBJ);\">Take Health Potion<\/button><\/li><li><button onclick=\"loseItem(book2OBJ); renderPage(\'Meet The Wizard\');\">Meet with the Wizard<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_alchemychamber.jpg');
 
-new SceneConstructor ('Meet The Wizard', 'The Wizard says, \"Thank you for returning my Tome.  Here is a token of my appreciation.\"  The Wizard conjures a brand new set of Heavy Armor and asks if you will accept his gift.', '<ul>\r\n  <li><button onclick=\"giveItem(hevArmorOBJ);\">Take Heavy Armor<\/button><\/li><li><button onclick=\"renderPage(\'Dream Scene\');\">Finish Quest<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_wizard.jpg');
+new SceneConstructor ('Meet The Wizard', 'The Wizard says, \"Thank you for returning my Tome.  Here is a token of my appreciation.\"  The Wizard conjures a brand new set of Heavy Armor and asks if you will accept his gift.', '<ul>\r\n  <li><button onclick=\"giveItem(hevArmorOBJ);\">Take Heavy Armor<\/button><\/li><li><button onclick=\"loseItem(book2OBJ); renderPage(\'Dream Scene\');\">Finish Quest<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_wizard.jpg');
 
-new SceneConstructor ('Dream Scene', 'Not more than 20 minutes after leaving the Wizard\'s cottage, you begin to feel dizzy.  You reach for your health potion but that only seems to make it worse.  \"Did the sorcerer trick me?\" you ask.  \"That son of a...\" Before you know it, you lose all consciousness...', '<ul>\r\n  <li><button onclick=\"renderPage(\'You wake up in a cave..\');\">What happens next?<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_dream.jpg');
+new SceneConstructor ('Dream Scene', 'Not more than 20 minutes after leaving the Wizard\'s cottage, you begin to feel dizzy.  You reach for your health potion but that only seems to make it worse.  \"Did the sorcerer trick me?\" you ask.  \"That son of a...\" Before you know it, you lose all consciousness...', '<ul>\r\n  <li><button onclick=\"loseItem(swordOBJ); renderPage(\'You wake up in a cave..\');\">What happens next?<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_dream.jpg');
 
 
 ////////////////////////////////////
