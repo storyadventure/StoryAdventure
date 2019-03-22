@@ -14,7 +14,6 @@ function SceneConstructor(sceneNumber, text, html, background) {
   book.push(this);
 }
 
-
 var pain1 = new Audio('sounds/FX_pain1.mp3');
 var pain2 = new Audio('sounds/FX_pain2.mp3');
 var pain3 = new Audio('sounds/FX_pain3.mp3');
@@ -260,6 +259,7 @@ function gainCat() {
 
 function checkIfDead(scene) {
   if (hero.hitPoints <= 0) {
+    play(death);
     alert('you have died');
     resetHero();
   }
@@ -370,7 +370,7 @@ new SceneConstructor ('Proceed To Castle Block', 'As you approach Castle Block, 
 
 new SceneConstructor ('The Inner Dungeon', 'The halls are dark and long, they never seem to end.  So far you have managed to avoid the Scorpion Pit, the Bowling-Boulder Ball, and the Breath of Fire.  You decide to rest and notice somthing in the rubble that looks like a backpack.', '<ul>\r\n  <li><button onclick=\"giveItem(ropeOBJ); giveItem(flashlightOBJ); renderPage(\'The Crossing\');\">What\'s this? I think I\'ll have a look.<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_innerdungeon.jpg');
 
-new SceneConstructor ('The Crossing', 'At the end of the dark dangerous corridor you enter an open room that looks like the ruins of a minecraft dungeon...What used to be a bridge is now broken from what seems to be the activation of some hidden trap.  There are pieces of body parts from previous tomb raiders below, oddly in the shape of blocks.  You think to yourself maybe that\'s why they call this Castle Block?  You use the rope you found in the backpack to swing across the trecherous gap.  Once you make it to the other side you notice there is only one way to go.  Danger creeps through your bones.', '<ul>\r\n  <li><button onclick=\"doDamage(35); play(pain2); loseItem(ropeOBJ); renderPage(\'The Spike Pit\');\">Continue Quest<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_dungeon_gap.jpg');
+new SceneConstructor ('The Crossing', 'At the end of the dark dangerous corridor you enter an open room that looks like the ruins of a minecraft dungeon...What used to be a bridge is now broken from what seems to be the activation of some hidden trap.  There are pieces of body parts from previous tomb raiders below, oddly in the shape of blocks.  You think to yourself maybe that\'s why they call this Castle Block?  You use the rope you found in the backpack to swing across the trecherous gap.  Once you make it to the other side you notice there is only one way to go.  Danger creeps through your bones.', '<ul>\r\n  <li><button onclick=\"doDamage(35); play(pain1); loseItem(ropeOBJ); renderPage(\'The Spike Pit\');\">Continue Quest<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_dungeon_gap.jpg');
 
 new SceneConstructor ('The Spike Pit', 'You misread the clues and fell into a spike pit.  Luckily you have rope to climb out.  Unfortunately in order to stop the bleeding you had to cut up your rope to make tourniquets for your arms and legs.', '<ul>\r\n  <li><button onclick=\"renderPage(\'The Puzzel Door Riddle One\');\">Continue Quest<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_trap.jpg');
 
@@ -388,7 +388,9 @@ new SceneConstructor ('Return To The Wizard', 'The Wizard is pleased you were ab
 
 new SceneConstructor ('Alchemy Chamber', 'Grab a health potion from the wall and meet the Wizard upstairs', '<ul>\r\n  <li><button onclick=\"giveItem(potionOBJ);\">Take Health Potion<\/button><\/li><li><button onclick=\"loseItem(book2OBJ); renderPage(\'Meet The Wizard\');\">Meet with the Wizard<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_alchemychamber.jpg');
 
-new SceneConstructor ('Meet The Wizard', 'The Wizard says, \"Thank you for returning my Tome.  Here is a token of my appreciation.\"  The Wizard conjures a brand new set of Heavy Armor and asks if you will accept his gift.', '<ul>\r\n  <li><button onclick=\"giveItem(hevArmorOBJ);\">Take Heavy Armor<\/button><\/li><li><button onclick=\"renderPage(\'start1\');\">Finish Quest<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_wizard.jpg');
+new SceneConstructor ('Meet The Wizard', 'The Wizard says, \"Thank you for returning my Tome.  Here is a token of my appreciation.\"  The Wizard conjures a brand new set of Heavy Armor and asks if you will accept his gift.', '<ul>\r\n  <li><button onclick=\"giveItem(hevArmorOBJ);\">Take Heavy Armor<\/button><\/li><li><button onclick=\"renderPage(\'Dream Scene\');\">Finish Quest<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_wizard.jpg');
+
+new SceneConstructor ('Dream Scene', 'Not more than 20 minutes after leaving the Wizard\'s cottage, you begin to feel dizzy.  You reach for your health potion but that only seems to make it worse.  \"Did the sorcerer trick me?\" you ask.  \"That son of a...\" Before you know it, you lose all consciousness...', '<ul>\r\n  <li><button onclick=\"renderPage(\'You wake up in a cave..\');\">What happens next?<\/button><\/li>\r\n<\/ul>' , 'img/aaronsbg_dream.jpg');
 
 
 ////////////////////////////////////
@@ -430,7 +432,6 @@ function loseItem(loseOBJ) {
       hero.items.splice(i, 1);
     }
   }
-  console.log('what is this? ', loseOBJ.id);
   document.getElementById(loseOBJ.id).setAttribute('style', 'opacity:0.3');
 }
 
@@ -452,6 +453,9 @@ function resetHero() {
   renderPage('start1');
   while (allScroll.firstChild) {
     allScroll.removeChild(allScroll.firstChild);
+  }
+  while (hero.items.length > 0) {
+    loseItem(hero.items[0]);
   }
 }
 
@@ -715,6 +719,7 @@ function handleHevArmorClick() {
 function handleSwordClick() {
   for(var i = 0; i < hero.items.length; i++) {
     if (hero.items[i].name === swordOBJ.name) {
+      play(swordfightsound);
       hero.attackPower += 10;
       alert('You use the sword and gain 10 attack');
       loseItem(swordOBJ);
