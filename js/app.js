@@ -127,11 +127,13 @@ new SceneConstructor('You approach a church building..', 'You approach the white
 
 new SceneConstructor('You pick up the shield!', 'You pick up a round shield. It\'s old and dusty but very sturdy. \"This will come in handy later.. \"', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'You continue down the path..\')\">\r\n  Continue down the path\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanwoodsexit1.jpg');
 
-new SceneConstructor('You continue down the path..', 'You continue down the path out of the woods.. You look back. You see the whole forest covered in fog and in the distance.. You hear another faint scream.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanvillagepath1\')\">\r\n  ryanvillagepath1\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanfog1.jpg');
+new SceneConstructor('You continue down the path..', 'You continue down the path.. You look back. You see the whole forest covered in fog and in the distance.. You hear another faint scream.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'End of the road..\')\">\r\n  Keep walking \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanfog1.jpg');
 
-new SceneConstructor('ryanvillagepath1', 'ryanvillagepath1', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'ryanleftvillage1\')\">\r\n  ryanleftvillage1\r\n<\/button>\r\n  <\/li>\r\n  <li>\r\n<button onclick=\"renderPage(\'ryanrightvillage2\')\">\r\n  ryanrightvillage2\r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanvillagepath1.jpg');
+new SceneConstructor('End of the road..', 'The woods starts to get thin and you feel the sense that you\'re almost out of the woods. You come to a fork in the road.. ', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'You come to a fork in the road..\')\">\r\n  Next \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanvillagepath1.jpg');
 
+new SceneConstructor('You come to a fork in the road..', ' Without hesitation you take the right road.. and after hours of walking you\'re out of the woods. It\'s dark but you see a brightly lit town in the distance. You breathe a sigh of relief.. You\'re bruised and scratched but finally safe.' , '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'The End\')\">\r\n The End \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanleftvillage1.jpg');
 
+new SceneConstructor('The End', ' Our lives are the sum of our actions and the choices we make.. Life is full of actions and reactions. This is what makes up the world all around us. Our actions.. No matter how small they appear, they have some kind of effect on something or someone.', '<ul>\r\n<li>\r\n  <button onclick=\"renderPage(\'start1\')\">\r\n Thank you for playing! \r\n<\/button>\r\n  <\/li>\r\n<\/ul>', 'img/ryanroad1.jpg');
 
 
 /*------------------------------------RYAN's SCENES END-----------------------------------------*/
@@ -456,7 +458,7 @@ function resetHero() {
 // this is the secret sauce, that makes the scene objects render
 function renderPage(sceneToRender) {
   if (hero.hitPoints <= 0) {
-    alert('you have died');
+    renderPage(graveyard);
     resetHero();
   }
   else {
