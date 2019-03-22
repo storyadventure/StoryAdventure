@@ -579,6 +579,7 @@ function doDamage(damage) {
   hero.hitPoints = hero.hitPoints - damage;
   // if number is greather than 0 reset to 0
   if (hero.hitPoints < 0) {
+    play(death);
     hero.hitPoints = 0;
   }
   var damageScroll = document.getElementById('scroll')
